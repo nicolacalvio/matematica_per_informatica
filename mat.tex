@@ -1,0 +1,89 @@
+
+\documentclass{article}
+\usepackage{amsmath} % for math symbols and equations
+
+\title{Metodi matematici per l'informatica}
+\author{Nicola Calvio}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduzione}
+
+Appunti del corso di Metodi matematici per l'informatica, tenuto dal prof.~Cenciarelli presso l'università Sapienza di Roma.
+
+\section{Insiemi}
+
+\subsection{Proprietà degli insiemi}
+%elenco puntato
+\begin{itemize}
+    \item due insiemi sono uguali se hanno gli stessi elementi.
+    \item tra tutti i sottoinsiemi di un insieme troviamo sempre l'insieme vuoto e l'insieme stesso.
+\end{itemize}
+
+\subsection{Operazioni tra insiemi}
+\begin{itemize}
+    \item unione: $A \cup B = \{x | x \in A \lor x \in B\}$ è l'insieme al quale appartengono gli elementi che appartengono almeno a uno degli insiemi
+    \item intersezione: $A \cap B = \{x | x \in A \land x \in B\}$ è l'insieme al quale appartengono gli elementi che appartengono ad entrambi gli insiemi
+    \item differenza: $A - B = \{x | x \in A \land x \notin B\}$ è l'insieme al quale appartengono gli elementi che appartengono ad $A$ ma non a $B$
+    \item complementare: $A^c = \{x | x \notin A\}$
+\end{itemize}
+
+\subsection{Operazioni su insiemi}
+\begin{itemize}
+    \item potenza: $P(A) = \{X | X \subseteq A\}$ è l'insieme di tutti i sottoinsiemi di $A$ (compreso l'insieme vuoto e l'insieme stesso)
+\end{itemize}
+
+\subsection{Coppie ordinate}
+\begin{equation}
+    (a,b) \not= (b,a) %newline
+\end{equation}
+\begin{equation}    
+    \{a,b\} = \{b,a\}
+\end{equation}
+\begin{equation}    
+    (a,b) = \{a,\{a,b\}\}
+\end{equation}
+
+%proprietà delle operazioni tra insiemi
+\subsection{Proprietà delle operazioni tra insiemi}
+\begin{itemize}
+    \item commutativa: $A \cup B = B \cup A$ e $A \cap B = B \cap A$
+    \item associativa: $(A \cup B) \cup C = A \cup (B \cup C)$ e $(A \cap B) \cap C = A \cap (B \cap C)$
+    \item distributiva: $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ e $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+    \item leggi di De Morgan: $(A \cup B)^c = A^c \cap B^c$ e $(A \cap B)^c = A^c \cup B^c$
+\end{itemize}
+
+\subsection{Prodotto cartesiano di due insiemi}
+%introduzione sulle coppie ordinate
+Una coppia ordinata è un insieme di due elementi, in cui l'ordine degli elementi è importante. Due coppie ordinate sono uguali se e solo se i loro elementi sono uguali e sono in corrispondenza uno a uno.\\
+
+%prodotto cartesiano
+Il prodotto cartesiano di due insiemi $A$ e $B$ è l'insieme 
+\begin{equation}
+    A \times B = \{(a,b) | a \in A \land b \in B\}
+\end{equation}
+%esempio
+\begin{equation}
+    A = \{1,2\} \quad B = \{a,b\} \quad A \times B = \{(1,a),(1,b),(2,a),(2,b)\}
+\end{equation}
+
+\subsection{Relazioni}
+%bold text
+\subsubsection{Relazioni binarie}
+scriviamo $a R b$ per indicare che $(a,b) \in R$ 
+
+\subsubsection{Proprietà delle relazioni} 
+\begin{itemize}
+\item $R \subseteq A \times A$  è antiriflessiva se per ogni $a \in A, (a,a) \notin R$
+\item $R \subseteq A \times A$  è riflessiva se per ogni $a \in A, (a,a) \in R$
+\item 
+\item $R \subseteq A \times A$  è simmetrica se per ogni $a,b \in A, a R b \Rightarrow b R a$
+\end{itemize}
+
+\section{Conclusion}
+
+This is the conclusion section of your math document.
+
+\end{document}
