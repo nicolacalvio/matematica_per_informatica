@@ -9,77 +9,132 @@
 
 \maketitle
 
+%voglio aggiungere un titolo grande a centro pagina
+\begin{center}
+    \section*{TEORIA}
+\end{center}
+
 \section{Introduzione}
 
 Appunti del corso di Metodi matematici per l'informatica, tenuto dal prof.~Cenciarelli presso l'università Sapienza di Roma.
+$\overline{b}$
 
-\section{Insiemi}
+\section{Relazioni}
+Le relazioni sono sottoinsiemi di prodotti cartesiani, ad esempio $R \subseteq A \times B$, dove $A$ e $B$ sono insiemi. Ci sono varie tipologie di relazioni (o arità), come relazioni binarie, ternarie, unarie, e nullarie.
 
-\subsection{Proprietà degli insiemi}
-%elenco puntato
+\subsection{Principi per Relazioni Binarie}
+Le seguenti sono proprietà comuni delle relazioni binarie su un insieme $A$:
+
+\subsection{Principi}
 \begin{itemize}
-    \item due insiemi sono uguali se hanno gli stessi elementi.
-    \item tra tutti i sottoinsiemi di un insieme troviamo sempre l'insieme vuoto e l'insieme stesso.
+    \item \textbf{Principio di simmetria}: se un certo x è in relazione con y allora y è in relazione con X
+    una relazione si dice simmetrica quando per ogni $(a,b) \in A$ se $(a,b)\in R$ allora $(b,a) \in R$
+    oppure usando una notazione infissa possiamo scrivesre se $a R b$ allora $b R a$
+    \item \textbf{Principio di riflessività}: una relazione binaria su un insieme $A$ si dice riflessiva quando ogni elemento è in relazione con se stesso ossia per ogni $a \in A$ la coppia $(a,a)$ è in relazione
+    \item \textbf{Principio di transitività}: una relazione binaria su un insieme $A$ si dice transitiva quando per ogni $a,b,c \in A$ se $(a,b) \in R$ e $(b,c) \in R$ allora $(a,c) \in R$
+    \item \textbf{Principio di antisimmetria}: una relazione binaria su un insieme $A$ si dice antisimmetrica quando per ogni $a,b \in A$ se $(a,b) \in R$ e $(b,a) \in R$ allora $a = b$
+    \item \textbf{Principio di antitransitività}: una relazione binaria su un insieme $A$ si dice antitransitiva quando per ogni $a,b,c \in A$ se $a R b$ e $b R c$ allora non deve essere $a R c$
+    \item \textbf{Principio di antiriflessività}: una relazione binaria su un insieme $A$ si dice antiriflessiva quando per ogni $a \in A$ non deve essere $(a,a) \in R$
+\end{itemize}
+\subsection{Considerazioni Aggiuntive}
+\begin{itemize}
+\item Le relazioni possono essere di varie arità, non solo binarie. Ad esempio, una relazione ternaria coinvolge triple di elementi.
 \end{itemize}
 
-\subsection{Operazioni tra insiemi}
+
+
+\section{Funzioni}
+Una funzione è un particolare tipo di relazione binaria che associa ogni elemento di un insieme $A$ (detto dominio) con uno e un solo elemento di un insieme $B$ (detto codominio).
+
+\subsection{Definizione Formale}
+Una funzione da un insieme $A$ a un insieme $B$ è una relazione $R \subseteq A \times B$ tale che per ogni elemento $a \in A$, esiste uno ed un solo elemento $b \in B$ tale che $(a, b) \in R$.
+
+\subsection{Tipi di Funzioni}
 \begin{itemize}
-    \item unione: $A \cup B = \{x | x \in A \lor x \in B\}$ è l'insieme al quale appartengono gli elementi che appartengono almeno a uno degli insiemi
-    \item intersezione: $A \cap B = \{x | x \in A \land x \in B\}$ è l'insieme al quale appartengono gli elementi che appartengono ad entrambi gli insiemi
-    \item differenza: $A - B = \{x | x \in A \land x \notin B\}$ è l'insieme al quale appartengono gli elementi che appartengono ad $A$ ma non a $B$
-    \item complementare: $A^c = \{x | x \notin A\}$
+\item \textbf{Iniettività}: Una funzione $f: A \rightarrow B$ è iniettiva se, per ogni $a_1, a_2 \in A$, $f(a_1) = f(a_2)$ implica $a_1 = a_2$. \\ Se due elementi di A sono uguali devono avere lo stesso elemento in B come corrispondente
+\item \textbf{Suriettività}: Una funzione $f: A \rightarrow B$ è suriettiva se, per ogni $b \in B$, esiste almeno un $a \in A$ tale che $f(a) = b$. \\ Ogni elemento in B deve avere un collegamento in A
+\item \textbf{Biettività}: Una funzione $f: A \rightarrow B$ è biettiva (o biunivoca) se è sia iniettiva che suriettiva. Ciò significa che $f$ stabilisce una corrispondenza uno-a-uno tra tutti gli elementi di $A$ e $B$.
 \end{itemize}
 
-\subsection{Operazioni su insiemi}
+\subsection{Funzione Inversa e Equipotenza}
 \begin{itemize}
-    \item potenza: $P(A) = \{X | X \subseteq A\}$ è l'insieme di tutti i sottoinsiemi di $A$ (compreso l'insieme vuoto e l'insieme stesso)
+\item \textbf{Funzione Inversa}: Se $f: A \rightarrow B$ è biettiva, esiste una funzione inversa $f^{-1}: B \rightarrow A$ tale che $f^{-1}(f(a)) = a$ per ogni $a \in A$ e $f(f^{-1}(b)) = b$ per ogni $b \in B$.
+\item \textbf{Equipotenza}: Due insiemi $A$ e $B$ sono equipotenti se esiste una funzione biettiva $f: A \rightarrow B$.
 \end{itemize}
 
-\subsection{Coppie ordinate}
-\begin{equation}
-    (a,b) \not= (b,a) %newline
-\end{equation}
-\begin{equation}    
-    \{a,b\} = \{b,a\}
-\end{equation}
-\begin{equation}    
-    (a,b) = \{a,\{a,b\}\}
-\end{equation}
-
-%proprietà delle operazioni tra insiemi
-\subsection{Proprietà delle operazioni tra insiemi}
+\subsection{Composizione e Proprietà}
 \begin{itemize}
-    \item commutativa: $A \cup B = B \cup A$ e $A \cap B = B \cap A$
-    \item associativa: $(A \cup B) \cup C = A \cup (B \cup C)$ e $(A \cap B) \cap C = A \cap (B \cap C)$
-    \item distributiva: $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ e $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
-    \item leggi di De Morgan: $(A \cup B)^c = A^c \cap B^c$ e $(A \cap B)^c = A^c \cup B^c$
+\item La composizione di due funzioni mantiene certe proprietà: la composizione di due funzioni iniettive è iniettiva; la composizione di due funzioni suriettive è suriettiva; la composizione di due funzioni biettive è biettiva.
+\item Invertendo l’ordine delle coppie di una funzione non iniettiva si ottiene una relazione che non è necessariamente una funzione, perché potrebbero esserci elementi in $B$ associati a più elementi in $A$.
+\item Una funzione $f: A \rightarrow B$ è biettiva se e solo se invertendo l’ordine delle sue coppie si ottiene una funzione, la quale è l'inversa di $f$ e si indica con $f^{-1}: B \rightarrow A$.
 \end{itemize}
 
-\subsection{Prodotto cartesiano di due insiemi}
-%introduzione sulle coppie ordinate
-Una coppia ordinata è un insieme di due elementi, in cui l'ordine degli elementi è importante. Due coppie ordinate sono uguali se e solo se i loro elementi sono uguali e sono in corrispondenza uno a uno.\\
-
-%prodotto cartesiano
-Il prodotto cartesiano di due insiemi $A$ e $B$ è l'insieme 
-\begin{equation}
-    A \times B = \{(a,b) | a \in A \land b \in B\}
-\end{equation}
-%esempio
-\begin{equation}
-    A = \{1,2\} \quad B = \{a,b\} \quad A \times B = \{(1,a),(1,b),(2,a),(2,b)\}
-\end{equation}
-
-\subsection{Relazioni}
-%bold text
-\subsubsection{Relazioni binarie}
-scriviamo $a R b$ per indicare che $(a,b) \in R$ 
-
-\subsubsection{Proprietà delle relazioni} 
+\subsection{Considerazioni Aggiuntive}
 \begin{itemize}
-\item $R \subseteq A \times A$  è antiriflessiva se per ogni $a \in A, (a,a) \notin R$
-\item $R \subseteq A \times A$  è riflessiva se per ogni $a \in A, (a,a) \in R$
-\item 
-\item $R \subseteq A \times A$  è simmetrica se per ogni $a,b \in A, a R b \Rightarrow b R a$
+\item \textbf{Dominio e Codominio}: È importante specificare il dominio e il codominio di una funzione, poiché questi insiemi influenzano le proprietà di iniettività, suriettività e biettività.
+\item \textbf{Immagine e Controimmagine}: L'immagine di una funzione è l'insieme degli elementi di $B$ che sono associati ad almeno un elemento di $A$. La controimmagine è l'insieme degli elementi di $A$ che sono mappati su un dato elemento di $B$.
+\item \textbf{Funzioni Parziali}: Esistono anche funzioni parziali, dove alcuni elementi di $A$ potrebbero non avere un'immagine in $B$.
+\end{itemize}
+
+\section{Cardinalità}
+La \textbf{cardinalità} di un insieme si riferisce alla sua classe di \textbf{equipotenza}.
+
+\subsection{Definizione di Equipotenza}
+Due insiemi $A$ e $B$ si dicono \textbf{equipotenti} se esiste una biiezione tra $A$ e $B$. In altre parole, $A$ ha la stessa cardinalità di $B$ se e solo se esiste una corrispondenza uno-a-uno e su tutto tra gli elementi di $A$ e quelli di $B$.
+
+\subsection{Proprietà dell'Equipotenza}
+L'equipotenza è una relazione di equivalenza che presenta le seguenti proprietà:
+\begin{itemize}
+\item \textbf{Riflessiva}: Ogni insieme è equipotente a se stesso, poiché la funzione identità è una biiezione.
+\item \textbf{Simmetrica}: Se $A$ è equipotente a $B$, allora $B$ è equipotente a $A$.
+\item \textbf{Transitiva}: Se $A$ è equipotente a $B$ e $B$ è equipotente a $C$, allora $A$ è equipotente a $C$.
+\end{itemize}
+
+\subsection{Notazione e Confronto di Cardinalità}
+La cardinalità di un insieme $A$ viene indicata con $|A|$. La relazione di cardinalità tra due insiemi è definita come segue:
+\begin{itemize}
+\item $|A| \leq |B|$ se e solo se (sse) esiste una iniezione da $A$ a $B$.
+\item $|A| = |B|$ se e solo se esiste una biiezione tra $A$ e $B$.
+\item $|A| < |B|$ se $|A| \leq |B|$ ma $|A| \neq |B|$.
+\end{itemize}
+
+\subsection{Teoremi Fondamentali}
+\begin{itemize}
+\item \textbf{Teorema}: Se $|A| \leq |B|$ e $|B| \leq |A|$, allora $|A| = |B|$. Questo è noto come il \textbf{teorema di Cantor-Bernstein-Schroeder}, che afferma che se esistono funzioni iniettive da $A$ a $B$ e da $B$ a $A$, allora esiste una biiezione tra $A$ e $B$.
+\end{itemize}
+
+\subsection{Teorema di Cantor}
+Georg Cantor ha dimostrato che non esiste una biiezione tra un insieme e il suo insieme delle parti. In altre parole:
+\begin{itemize}
+\item \textbf{Teorema}: $|A| < |P(A)|$ per ogni insieme $A$, dove $P(A)$ indica l'insieme delle parti di $A$.
+\end{itemize}
+
+\section{Algebra di Boole}
+\subsection{Definizione}
+L'algebra di Boole è definita su un gruppo con delle operazioni e dei valori, queste strutture e operazioni verificano alcune proprietà, l'algebra.
+
+\subsection{operazioni}
+Le operazioni dell'algebra di Boole sono:
+\begin{itemize}
+    \item \textbf{meet} che si indica con il simbolo $\land$ e ha valenza dell'AND logico
+    \item \textbf{join} che si indica con il simbolo $\lor$ e ha valenza dell'OR logico
+    \item \textbf{complemento} che si indica con il simbolo $\overline{a}$ e ha valenza del NOT logico ($\lnot$)
+\end{itemize}
+
+\subsection{proprietà dell'algebra di Boole}
+\begin{itemize}
+    \item \textbf{Associativa} \\ $A \lor (B \lor C) = (A \lor B) \lor C$ \\ $A \land (B \land C) = (A \land B) \land C$
+    \item \textbf{Commutativa} \\ $A \lor B = B \lor A \quad\quad A \land B = B \land A$
+    \item \textbf{Assorbimento} \\ $A \lor (A \land B) = A \quad\quad A \land (A \lor B) = A$
+    \item \textbf{Idempotenza} \\ $A \lor A = A \quad\quad A \land A = A$
+    \item \textbf{Distributiva} \\ $A \land (B \lor C) = (A \land B) \lor (A \land C) \\ A \lor (B \land C) = (A \lor B) \land (A \lor C)$
+    \item \textbf{Identità} \\ $A \lor \bot = A \quad\quad A \lor \top = A$
+    \item \textbf{Complemento} \\ $A \lor \overline{A} = \top \quad\quad A \land \overline{A} = \bot$
+    \item \textbf{De Morgan} \\ $\overline{A \lor B} = \overline{A} \lor \overline{B} \quad\quad \overline{A \land B} = \overline{A} \lor \overline{B}$
+\end{itemize}
+\subsection{Considerazioni Aggiuntive}
+\begin{itemize}
+    \item Le operazioni booleane sono definite su un insieme di due elementi, tipicamente rappresentati come ${0, 1}$, ${\bot, \top}$, o ${\text{false}, \text{true}}$.
 \end{itemize}
 
 \section{Conclusion}
