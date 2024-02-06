@@ -1,6 +1,9 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=2cm]{geometry}
 \usepackage{amsmath} % for math symbols and equations
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \title{Metodi matematici per l'informatica}
 \author{Nicola Calvio}
@@ -18,6 +21,85 @@
 
 Appunti del corso di Metodi matematici per l'informatica, tenuto dal prof.~Cenciarelli presso l'università Sapienza di Roma.
 
+\section{Insiemi}
+
+La teoria degli insiemi è una branca della matematica che studia le collezioni di oggetti, denominate insiemi, e le operazioni che possono essere effettuate su di essi.
+
+\subsection{Definizioni Base}
+Un \textbf{insieme} è una collezione di oggetti distinti, chiamati elementi dell'insieme. Gli insiemi vengono di solito denotati con lettere maiuscole, mentre gli elementi con lettere minuscole.
+
+\begin{itemize}
+    \item Un insieme può essere definito elencando i suoi elementi tra parentesi graffe: $A = \{a, b, c\}$.
+    \item La notazione $a \in A$ significa che $a$ è un elemento dell'insieme $A$.
+    \item La notazione $b \notin A$ significa che $b$ non è un elemento dell'insieme $A$.
+\end{itemize}
+
+\subsection{Operazioni sugli Insiemi}
+Le principali operazioni sugli insiemi includono l'unione, l'intersezione e la differenza di insiemi.
+
+\begin{itemize}
+    \item \textbf{Unione}: L'unione di due insiemi $A$ e $B$, denotata con $A \cup B$, è l'insieme degli elementi che appartengono ad $A$ o a $B$ (o ad entrambi).
+    \item \textbf{Intersezione}: L'intersezione di due insiemi $A$ e $B$, denotata con $A \cap B$, è l'insieme degli elementi che appartengono sia ad $A$ che a $B$.
+    \item \textbf{Differenza}: La differenza di due insiemi $A$ e $B$, denotata con $A - B$ o $A \setminus B$, è l'insieme degli elementi che appartengono ad $A$ e non a $B$.
+\end{itemize}
+
+\subsection{Sottoinsiemi}
+Un insieme $A$ si dice \textbf{sottoinsieme} di un insieme $B$, denotato con $A \subseteq B$, se ogni elemento di $A$ è anche un elemento di $B$. Se $A$ è un sottoinsieme di $B$ ma $A$ non è uguale a $B$, allora $A$ si dice \textbf{sottoinsieme proprio} di $B$, denotato con $A \subset B$.
+
+\subsection{Insiemi Speciali}
+Alcuni insiemi hanno un'importanza particolare nella matematica:
+
+\begin{itemize}
+    \item L'\textbf{insieme vuoto}, denotato con $\emptyset$, è l'insieme che non contiene elementi.
+    \item Gli insiemi di numeri come gli \textbf{insiemi dei numeri naturali} $\mathbb{N}$, \textbf{interi} $\mathbb{Z}$, \textbf{razionali} $\mathbb{Q}$, \textbf{reali} $\mathbb{R}$, e \textbf{complessi} $\mathbb{C}$.
+\end{itemize}
+
+\subsection{Proprietà degli Insiemi}
+Gli insiemi e le operazioni su di essi soddisfano diverse proprietà matematiche, come la commutatività, l'associatività, e le leggi distributive.
+
+\section{Coppie Ordinate}
+
+Una coppia ordinata è una collezione di due elementi in cui l'ordine degli elementi ha importanza. Le coppie ordinate sono comunemente utilizzate per definire concetti matematici come funzioni, relazioni e prodotti cartesiani.
+
+\subsection{Definizione}
+
+Una coppia ordinata $(a, b)$ è composta da due elementi dove $a$ è il primo elemento e $b$ è il secondo elemento. L'ordine degli elementi è significativo, il che significa che $(a, b) \neq (b, a)$ a meno che $a = b$.
+
+\subsection{Notazione e Proprietà}
+
+La notazione per una coppia ordinata è la seguente:
+
+\begin{itemize}
+    \item $(a, b)$ indica una coppia ordinata dove $a$ è il primo membro e $b$ è il secondo membro.
+\end{itemize}
+
+Le proprietà principali delle coppie ordinate includono:
+
+\begin{itemize}
+    \item \textbf{Unicità}: Due coppie ordinate $(a, b)$ e $(c, d)$ sono uguali se e solo se $a = c$ e $b = d$.
+    \item \textbf{Ordine}: L'ordine degli elementi è cruciale. $(a, b) \neq (b, a)$ a meno che $a = b$.
+\end{itemize}
+
+\subsection{Prodotto Cartesiano}
+
+Il prodotto cartesiano di due insiemi $A$ e $B$, denotato con $A \times B$, è l'insieme di tutte le possibili coppie ordinate $(a, b)$ dove $a \in A$ e $b \in B$. 
+
+\subsubsection{Esempio}
+
+Dati gli insiemi $A = \{1, 2\}$ e $B = \{x, y\}$, il prodotto cartesiano $A \times B$ è:
+
+\[ A \times B = \{(1, x), (1, y), (2, x), (2, y)\} \]
+
+\subsection{Applicazioni delle Coppie Ordinate}
+
+Le coppie ordinate sono utilizzate in vari ambiti della matematica e delle sue applicazioni, inclusi:
+
+\begin{itemize}
+    \item Definizione di funzioni come collezioni di coppie ordinate.
+    \item Rappresentazione di punti nel piano cartesiano.
+    \item Costruzione di relazioni tra elementi di due insiemi.
+\end{itemize}
+\newpage
 \section{Relazioni}
 Le relazioni sono sottoinsiemi di prodotti cartesiani, ad esempio $R \subseteq A \times B$, dove $A$ e $B$ sono insiemi. Ci sono varie tipologie di relazioni (o arità), come relazioni binarie, ternarie, unarie, e nullarie.
 
@@ -136,13 +218,97 @@ Le operazioni dell'algebra di Boole sono:
 \begin{itemize}
     \item Le operazioni booleane sono definite su un insieme di due elementi, tipicamente rappresentati come ${0, 1}$, ${\bot, \top}$, o ${\text{false}, \text{true}}$.
 \end{itemize}
+\newpage
+\section{Assiomi di Hilbert per la Logica Proposizionale}
 
-\section{Assiomi di Hilbert}
+Gli assiomi di Hilbert sono formule di base in un sistema logico che, insieme alle regole di inferenza, permettono la deduzione di teoremi.
 
-\section{Logica proposizionale}
+\subsection{Assiomi}
+\begin{itemize}
+    \item $A \rightarrow (B \rightarrow A)$
+    \item $(A \rightarrow (B \rightarrow C)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C))$
+    \item $(\neg A \rightarrow \neg B) \rightarrow (B \rightarrow A)$
+\end{itemize}
 
-\section{Conclusion}
+\subsection{Regola di Inferenza}
+La \textbf{modus ponens} è l'unica regola di inferenza nel sistema di Hilbert, che afferma: se abbiamo $A$ e $A \rightarrow B$, allora possiamo dedurre $B$.
 
-This is the conclusion section of your math document.
+\subsubsection{Esempio}
+Se abbiamo una formula che afferma "se piove allora porto l'ombrello" e un'affermazione che dice "piove", allora possiamo dedurre "porto l'ombrello".
+
+\subsection{Teorema di Deduzione}
+\subsubsection{Sequente}
+Un sequente è un'espressione in cui abbiamo un simbolo di deduzione $\vdash$ e un insieme di formule. Per esempio, $A, B, C \vdash D$ significa che da $A, B, C$ possiamo dedurre $D$.
+
+\subsubsection{Derivazione}
+Una derivazione è una sequenza di formule dove ogni formula è un'istanza di un assioma o è ottenuta tramite la regola di inferenza (modus ponens), usando come premesse due formule che la precedono.
+
+\subsection{Formula della Transitività dell'Implicazione}
+La transitività dell'implicazione è espressa dalla formula:
+\[(A \rightarrow B) \land (B \rightarrow C) \rightarrow (A \rightarrow C)\]
+
+\newpage
+\section{Logica Proposizionale}
+
+La logica proposizionale è un ramo della logica matematica che studia i modi in cui le proposizioni possono essere combinate e le relazioni tra di esse.
+
+\subsection{Linguaggio della Logica Proposizionale}
+Il \textbf{linguaggio} della logica proposizionale è composto da:
+\begin{itemize}
+\item \textbf{Simboli proposizionali atomici}: Sono le lettere che rappresentano proposizioni semplici e indivisibili, come $p$, $q$, $r$, ecc.
+\item \textbf{Operatori logici}: Sono utilizzati per costruire formule più complesse a partire da quelle semplici. Gli operatori includono:
+\begin{itemize}
+\item \textbf{Implicazione} ($\rightarrow$): Indica una relazione di conseguenza logica.
+\item \textbf{Negazione} ($\neg$): Esprime il contrario di una proposizione.
+\item \textbf{Disgiunzione} ($\lor$): Corrisponde all'operatore logico "or".
+\item \textbf{Coniunzione} ($\land$): Corrisponde all'operatore logico "and".
+\item \textbf{Doppia implicazione} ($\leftrightarrow$): Indica una relazione di equivalenza logica, anche detta "se e solo se" (sse).
+\end{itemize}
+\end{itemize}
+
+\subsection{Semantica}
+La \textbf{semantica} si occupa del significato delle formule della logica, attribuendogli un valore di verità: vero ($\top$) o falso ($\bot$).
+
+\subsubsection{Tabelle di Verità}
+Le tabelle di verità sono uno strumento fondamentale nella logica proposizionale, in quanto permettono di analizzare le formule per determinare il loro valore di verità in base ai valori delle proposizioni atomiche da cui sono composte.
+
+\subsection{Modello della Logica Proposizionale}
+Un \textbf{modello} in logica proposizionale è un'attribuzione specifica di valori di verità ai simboli proposizionali atomici. Ad esempio, in un dato modello, le proposizioni $A$, $B$, e $C$ possono essere tutte vere, tutte false, o avere una combinazione di valori di verità.
+\newpage
+\section{Come Usare i Tableau Proposizionali}
+
+I tableau proposizionali sono un potente strumento utilizzato nella logica per determinare la soddisfacibilità di formule proposizionali. Questo metodo si basa sull'espansione di un albero di decisione seguendo regole specifiche per gli operatori logici.
+
+\subsection{Principi Base}
+
+Il procedimento inizia con la formula che si vuole analizzare. L'obiettivo è decomporre la formula in componenti più semplici fino a raggiungere proposizioni atomiche, seguendo un insieme di regole di decomposizione che variano in base agli operatori logici presenti.
+
+\subsection{Regole di Decomposizione}
+
+Le regole di decomposizione per i vari operatori logici sono le seguenti:
+
+\begin{itemize}
+    \item \textbf{Negazione} ($\neg$): La negazione di una proposizione atomica o di una formula complessa viene decomposta invertendo il suo valore di verità.
+    \item \textbf{Coniunzione} ($\land$): Una formula del tipo $A \land B$ viene decomposta in due rami, uno per $A$ e uno per $B$, che devono entrambi essere veri.
+    \item \textbf{Disgiunzione} ($\lor$): Una formula del tipo $A \lor B$ genera due sottorami separati, uno con $A$ vero e l'altro con $B$ vero, indicando che almeno uno dei due deve essere vero.
+    \item \textbf{Implicazione} ($\rightarrow$): Un'implicazione $A \rightarrow B$ viene trattata come $\neg A \lor B$, generando due sottorami: uno con $A$ falso e l'altro con $B$ vero.
+    \item \textbf{Doppia implicazione} ($\leftrightarrow$): Una doppia implicazione $A \leftrightarrow B$ viene decomposta in due parti: $A \rightarrow B$ e $B \rightarrow A$.
+\end{itemize}
+
+\subsection{Chiusura del Tableau}
+
+Un ramo del tableau si dice \textit{chiuso} se contiene una contraddizione, ovvero la stessa proposizione atomica appare sia in forma affermativa che negativa. Se tutti i rami del tableau sono chiusi, la formula iniziale è insoddisfacibile. Se almeno un ramo rimane aperto (senza contraddizioni), la formula è soddisfacibile, e le assegnazioni di verità lungo il ramo aperto forniscono un modello che soddisfa la formula.
+
+\subsection{Esempio di Applicazione}
+
+Consideriamo la formula $(P \rightarrow Q) \land (\neg Q \lor R)$. Per analizzarla con un tableau proposizionale, si inizia scrivendo la formula sulla cima del tableau e poi si procede a decomporla seguendo le regole sopra descritte, espandendo l'albero fino a raggiungere proposizioni atomiche o contraddizioni.
+
+\subsection{Conclusioni}
+
+I tableau proposizionali sono uno strumento essenziale per la verifica della soddisfacibilità delle formule logiche. Grazie alla loro struttura sistematica, permettono di esplorare tutte le possibili assegnazioni di valori di verità per determinare la veridicità di una formula.
+
+\newpage
+\section{Esercizi}
+
 
 \end{document}
