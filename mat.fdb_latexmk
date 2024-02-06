@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1707259655 "c:/Users/info/Desktop/matematica_per_informatica/mat.tex" "mat.pdf" "mat" 1707259656 0
-  "c:/Users/info/Desktop/matematica_per_informatica/mat.tex" 1707259654 19744 ac26bd3bc509e1ce77d3545fb714b72e ""
+["pdflatex"] 1707262307 "c:/Users/info/Desktop/matematica_per_informatica/mat.tex" "mat.pdf" "mat" 1707262309 0
+  "c:/Users/info/Desktop/matematica_per_informatica/mat.tex" 1707262306 21737 3e4b5270e90771d41fb5963221da983d ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1701619762 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1701620107 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1701619968 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -59,8 +59,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1701624280 4754669 d96ac81ce84784930de265f48f40d2ce ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1701624498 8213460 083640d2dc839cb6cc00a4c3935368ef ""
   "c:/texlive/2023/texmf.cnf" 1701624262 713 e69b156964470283e0530f5060668171 ""
-  "mat.aux" 1707259656 6099 2e23d63283ca49622aba06cf8d287f24 "pdflatex"
-  "mat.tex" 1707259654 19744 ac26bd3bc509e1ce77d3545fb714b72e ""
+  "mat.aux" 1707262309 6310 6dba5d058d3fc556e1caadc2b1a4b595 "pdflatex"
+  "mat.tex" 1707262306 21737 3e4b5270e90771d41fb5963221da983d ""
   (generated)
   "mat.aux"
   "mat.log"
