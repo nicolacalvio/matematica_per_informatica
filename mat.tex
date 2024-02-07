@@ -312,8 +312,22 @@ I tableau proposizionali sono uno strumento essenziale per la verifica della sod
 questi esercizi sono tratti dali web seminar:
 \begin{itemize}
     \item \textbf{5 luglio 2021}
-    \item \textbf{Esercizio 2}
+    \item \textbf{29 luglio 2021}
+    \item \textbf{11 settembre 2021}
+    \item \textbf{11 gennaio 2022}
 \end{itemize}
+
+\subsection{Insiemi}
+\textbf{Domanda}: La differenza tra due insiemi $A$ e $B$  \\
+\textbf{Risposta}: È definita come le $X$ che non appartengono ad $A$ ma appartengono a $B$. \\ \\
+\textbf{Domanda}: Come definisci l'intersezione tra due insiemi $A$ e $B$? \\
+\textbf{Risposta}: L'intersezione è le $X \in A: X \in B$ (principio di comprensione) \\ \\
+\textbf{Domanda}: Come definisci l'unione? \\
+\textbf{Risposta}: L'insieme di elementi che appartengono ad $A$ più quelli che appartengono a $B$. Per dimostrarlo serve un assioma della teoria degli insiemi che dato un insieme $A$ e un insieme $B$ esiste un insieme $C$ tale che $A \subseteq C \land C,B \subseteq C$ \\ \\
+
+
+
+
 \subsection{Relazioni}
 \textbf{Domanda}: Perché si parla sempre di relazione riflessiva, anti-riflessiva, simmetrica e antisimmetrica però di transitiva non si parla mai di una relazione anti-transitiva?\\
 \textbf{Risposta}: La relazione anti-transitiva è una relazione che non soddisfa la proprietà di transitività. In altre parole, una relazione $R$ è anti-transitiva se esistono $a, b, c$ tali che $a R b$ e $b R c$, ma non $a R c$. Un esempio è la relazione del successore. Tuttavia, questa proprietà non è così comune o rilevante come le altre proprietà delle relazioni, quindi non è spesso menzionata in modo specifico. \\ \\
@@ -326,6 +340,12 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: Qual'è la differenza tra relazione vuota su $N \times N$ e la relazione vuota su insieme vuoto? \\
 \textbf{Risposta}: La relazione vuota su $N \times N$ è un sottoinsieme di $N \times N$ che non contiene alcuna coppia ordinata. La relazione vuota sull'insieme vuoto è un sottoinsieme dell'insieme vuoto, che non contiene alcun elemento. \\ \\
 
+
+\subsection{Funzioni}
+\textbf{Domanda}: Una funzione è un particolare tipo di relazione, una funzione è invertibile se e solo se vista e considerata come relazione è una relazione simmetrica. \\
+\textbf{Risposta}: Quindi è una relazione binaria su un insieme dato che va da $A$ in $A$. Per dimostrare che una funzione è invertibile deve essere biunivoca ossia suriettiva e iniettiva. \\ \\
+
+
 \subsection{Cardinalità}
 \textbf{Domanda}:le relazioni SAS (sono le relazioni simmetriche e antisimmetriche contemporaneamente) e TAT (le relazioni transistive e antitransitiva). Son di più le relazioni SAS o TAT? \\
 \textbf{Risposta}: Per confrontare la cardinalità delle relazioni che sono simultaneamente simmetriche e antisimmetriche (SAS) con quelle che sono sia transitive che antitransitive (TAT), consideriamo il concetto di infinità e le proprietà delle relazioni tra insiemi di numeri.
@@ -336,7 +356,16 @@ Per dimostrare che le relazioni TAT hanno una cardinalità almeno pari all'insie
 
 Ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT mediante questa costruzione. Questo stabilisce una funzione iniettiva dall'insieme delle parti dei numeri primi all'insieme delle relazioni TAT, dimostrando che la cardinalità dell'insieme delle relazioni TAT è maggiore o uguale alla cardinalità dell'insieme delle parti dei numeri primi, che è non numerabile.
 
-In conclusione, poiché l'insieme delle parti dei numeri primi è non numerabile e ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT, segue che l'insieme delle relazioni TAT è anch'esso non numerabile e, per costruzione, la sua cardinalità è almeno pari a quella dell'insieme delle parti dei numeri primi. Questo ragionamento non si applica direttamente alle relazioni SAS, la cui cardinalità dipende da considerazioni diverse, ma suggerisce che le relazioni TAT rappresentano un insieme vasto e complesso di relazioni.
+In conclusione, poiché l'insieme delle parti dei numeri primi è non numerabile e ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT, segue che l'insieme delle relazioni TAT è anch'esso non numerabile e, per costruzione, la sua cardinalità è almeno pari a quella dell'insieme delle parti dei numeri primi. Questo ragionamento non si applica direttamente alle relazioni SAS, la cui cardinalità dipende da considerazioni diverse, ma suggerisce che le relazioni TAT rappresentano un insieme vasto e complesso di relazioni. \\ \\
+\textbf{Domanda}: Sono di più i numeri naturali o le liste finite di numeri naturali? \\
+\textbf{Risposta}: La cardinalità di $N$ si indica con $\omega$, $2^\omega$ è riferita alla cardinalità del continuo. Qui parliamo di insiemi di sequenza di n.
+L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è una funzione biettiva. \textbf{Bernstein Schroder} dice che se esistono due funzioni iniettive una in un senso e una in un altro allora esiste una funzione biettiva. Abbiamo quindi dimostrato che la cardinalità di n, parti finite di n hanno la stessa cardinalità. \\ \\
+\textbf{Domanda}: Sono più i numeri naturali o i sottoinsiemi finiti dei naturali?
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Tirar fuori la cardinalità 49 dall’insieme 7 usando le funzioni \\
+\textbf{Risposta}: Se ho un insieme $A$ e un insieme $B$ la cardinalità delle funzioni da $A$ a $B$ è $B^A$. Voglio sapere le funzioni iniettive (tutto il dominio è mappato nel codominio), quindi ci sono tante funzioni iniettive quante le permutazioni di 7 ossia $7!$. L'insieme delle parti di 7 è $2^7$ ed è l'insieme di tutte le funzioni da 7 in bool, gli elementi di $7 \times 7$ è 49 (tanti quanti da bool a giorni della settimana). \\ \\
+
+
 
 \subsection{Sistema di Hilbert}
 \textbf{Domanda}: Dimostrami che $A \vdash A$ \\
@@ -344,5 +373,31 @@ In conclusione, poiché l'insieme delle parti dei numeri primi è non numerabile
 prendendo il secondo assioma $(A \rightarrow ((A \rightarrow A) \rightarrow A)) \rightarrow (A \rightarrow (A \rightarrow A)) \rightarrow (A \rightarrow A)$
 applichiamo il modus ponens alle 2 ne deduciamo $(A \rightarrow (A \rightarrow A)) \rightarrow A \rightarrow A$ ora dobbiamo dimostrarla.\\
 Dal primo assioma prendiamo un altra istanza $A \rightarrow (A \rightarrow A)$ ora applichiamo modus ponens e arriviamo ad $A \rightarrow A$ quindi per il teorema di deduzione
-sappiamo che da A si deriva A
+sappiamo che da A si deriva A. \\ \\
+\textbf{Domanda}: Cos'è un sequente? \\
+\textbf{Risposta}: La formula che sta a destra del simbolo di deduzione è derivabile da ciò che sta a sinistra, vuol dire che esiste una dimostrazione di ciò che sta a destra usando quello che sta a sinistra. \\
+Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens.
+\textbf{Domanda}: Questo sequente è corretto? $B, B \rightarrow A, A \rightarrow C \vdash C$ \\
+\textbf{Risposta}: \\ \\
+
+
+\subsection{Algebra di boole}
+\textbf{Domanda}:
+
+
+\subsection{Logica}
+\textbf{Domanda}: Dimostrare che $A \lor B \rightarrow B \lor A$
+\textbf{Risposta}: Si può fare con le tavole di verità, con Hilbert o con i Tableau. Risolvendo con gli assiomi di Hilbert possiamo modificare la formula usando solo $\lnot$ e $\rightarrow$. In questo caso $A \lor B$ diventa $\overline{A} \rightarrow B$. \\
+Quindi traducendo abbiamo $\overline{A} \rightarrow B \rightarrow \overline{B} \rightarrow A$. Possiamo anche dimostrare con Tableau, prendo la formula e la nego poi applico Tableau e dimostro che costruisco un albero chiuso, questo significa che la formula negata non è soddisfacibile \\ \\
+\textbf{Domanda}: Supponiamo di prendere la formula $\vdash (A \rightarrow (B \rightarrow C)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C))$ \\
+\textbf{Risposta}: Per dimostrare l'assioma possiamo usare il teorema di deduzione e il modus ponens
+\begin{itemize}
+    \item $A \rightarrow (B \rightarrow C) \vdash (A \rightarrow B) \rightarrow (A \rightarrow C)$
+    \item poi applichiamo di nuovo il teorema di deduzione
+    \item $A \rightarrow (B \rightarrow C), A \rightarrow B \vdash A \rightarrow C$
+    \item $(A \rightarrow B), A, A \rightarrow (B \rightarrow C) \vdash C$
+\end{itemize}
+\textbf{Domanda}: Che cos'è una dimostrazione \\
+\textbf{Risposta}: Una sequenza di formule che contiene o deduzioni o istanze di assiomi o premesse, l'ultima della quale è $C$ nel caso sopra. \\ \\
+
 \end{document}
