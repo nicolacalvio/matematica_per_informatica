@@ -328,6 +328,21 @@ questi esercizi sono tratti dali web seminar:
 
 \subsection{Cardinalità}
 \textbf{Domanda}:le relazioni SAS (sono le relazioni simmetriche e antisimmetriche contemporaneamente) e TAT (le relazioni transistive e antitransitiva). Son di più le relazioni SAS o TAT? \\
-\textbf{Risposta}: 
+\textbf{Risposta}: Per confrontare la cardinalità delle relazioni che sono simultaneamente simmetriche e antisimmetriche (SAS) con quelle che sono sia transitive che antitransitive (TAT), consideriamo il concetto di infinità e le proprietà delle relazioni tra insiemi di numeri.
 
+Prima di tutto, ricordiamo che un insieme di numeri primi è infinito e numerabile, mentre l'insieme delle parti di un insieme infinito numerabile, come l'insieme dei numeri primi \(P\), è un'infinità non numerabile. Questo è un risultato diretto del teorema di Cantor, che afferma che l'insieme delle parti di qualsiasi insieme \(A\) ha una cardinalità maggiore dell'insieme \(A\) stesso.
+
+Per dimostrare che le relazioni TAT hanno una cardinalità almeno pari all'insieme delle parti dei numeri primi, consideriamo una costruzione specifica. Prendiamo un qualsiasi sottoinsieme di numeri primi, ad esempio \(\{7, 11, 13\}\), e costruiamo una relazione che includa coppie del tipo \((p, p+1)\), dove \(p\) è un numero primo e \(p+1\) è il suo successore immediato. Per il nostro esempio, otteniamo le coppie \((7, 8)\), \((11, 12)\), \((13, 14)\). Questa costruzione garantisce che la relazione sia antitransitiva, poiché non esistono tre elementi \(a\), \(b\), \(c\) tali che se \((a, b)\) e \((b, c)\) appartengono alla relazione, allora \((a, c)\) dovrebbe appartenere alla relazione, il che è impossibile per la nostra costruzione.
+
+Ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT mediante questa costruzione. Questo stabilisce una funzione iniettiva dall'insieme delle parti dei numeri primi all'insieme delle relazioni TAT, dimostrando che la cardinalità dell'insieme delle relazioni TAT è maggiore o uguale alla cardinalità dell'insieme delle parti dei numeri primi, che è non numerabile.
+
+In conclusione, poiché l'insieme delle parti dei numeri primi è non numerabile e ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT, segue che l'insieme delle relazioni TAT è anch'esso non numerabile e, per costruzione, la sua cardinalità è almeno pari a quella dell'insieme delle parti dei numeri primi. Questo ragionamento non si applica direttamente alle relazioni SAS, la cui cardinalità dipende da considerazioni diverse, ma suggerisce che le relazioni TAT rappresentano un insieme vasto e complesso di relazioni.
+
+\subsection{Sistema di Hilbert}
+\textbf{Domanda}: Dimostrami che $A \vdash A$ \\
+\textbf{Risposta}: Significa che $A$ è deducibile da $A, A \rightarrow ((A \rightarrow A) \rightarrow A)$ istanza del primo assioma,
+prendendo il secondo assioma $(A \rightarrow ((A \rightarrow A) \rightarrow A)) \rightarrow (A \rightarrow (A \rightarrow A)) \rightarrow (A \rightarrow A)$
+applichiamo il modus ponens alle 2 ne deduciamo $(A \rightarrow (A \rightarrow A)) \rightarrow A \rightarrow A$ ora dobbiamo dimostrarla.\\
+Dal primo assioma prendiamo un altra istanza $A \rightarrow (A \rightarrow A)$ ora applichiamo modus ponens e arriviamo ad $A \rightarrow A$ quindi per il teorema di deduzione
+sappiamo che da A si deriva A
 \end{document}
