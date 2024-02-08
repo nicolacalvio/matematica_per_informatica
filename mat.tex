@@ -473,7 +473,7 @@ Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
     \item quindi usiamo De Morgan
     \item $\bot = \bot \land \overline{b} = (a \land \overline{a}) \land \overline{b} = a \land (\overline{a} \land \overline{b}) = a \land \overline(a \lor b) = (a \lor \overline{b})$
     \item perchè ricordiamo $\bot \land a = \bot$ e $\top \lor a = \top$
-\end{itemize} \\ \\
+\end{itemize}
 \textbf{Domanda}: quanti modelli ci sono se ho solo 3 simboli proposizionali? \\
 \textbf{Risposta}: $2 \times 2 \times 2$ ossia $2^3 = 8$\\ \\
 \textbf{Domanda}: supponiamo che i simboli proposizionali siano 3: $A, B, C$ quanti modelli ci sono dove la formula $A \rightarrow B$ è vera? \\
@@ -498,6 +498,11 @@ Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
 \end{itemize}
 quindi possiamo derivare la formula $A \land B \rightarrow B$
 \begin{itemize}
-    \item
+    \item $\overline{A \rightarrow \overline{B}} \rightarrow B$
+    \item $\overline{B} \rightarrow (A \rightarrow \overline{B})$ è una particolare istanza del primo assioma di Hilbert
+    \item $(A \rightarrow \overline{B}) \rightarrow \overline{\overline{A \rightarrow \overline{B}}}$ sto assumendo che $A \rightarrow \overline{\overline{A}}$
+    \item applico la transitività $\overline{B} \rightarrow \overline{\overline{A \rightarrow \overline{B}}}$
+    \item terzo assioma di Hilbert $(\overline{A} \rightarrow \overline{B}) \rightarrow (B \rightarrow A)$
 \end{itemize}
+posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \rightarrow C)}{B \rightarrow (A \rightarrow C)}$, \\ la transitività $(A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (A \rightarrow C)$ e lo pseudo scoto
 \end{document}
