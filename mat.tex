@@ -315,6 +315,9 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{29 luglio 2021}
     \item \textbf{11 settembre 2021}
     \item \textbf{11 gennaio 2022}
+    \item \textbf{3 novembre 2023}
+    \item \textbf{24 novembre 2023}
+    \item \textbf{8 dicembre 2023}
 \end{itemize}
 
 \subsection{Insiemi}
@@ -324,7 +327,8 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Risposta}: L'intersezione è le $X \in A: X \in B$ (principio di comprensione) \\ \\
 \textbf{Domanda}: Come definisci l'unione? \\
 \textbf{Risposta}: L'insieme di elementi che appartengono ad $A$ più quelli che appartengono a $B$. Per dimostrarlo serve un assioma della teoria degli insiemi che dato un insieme $A$ e un insieme $B$ esiste un insieme $C$ tale che $A \subseteq C \land C,B \subseteq C$ \\ \\
-
+\textbf{Domanda}: Dimostra l'uguaglianza $A - (B \cup C) = (A - B) \cap (A - C)$ \\
+\textbf{Risposta}: \\ \\
 
 
 
@@ -339,12 +343,47 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Risposta}: Sì, l'insieme vuoto. \\ \\
 \textbf{Domanda}: Qual'è la differenza tra relazione vuota su $N \times N$ e la relazione vuota su insieme vuoto? \\
 \textbf{Risposta}: La relazione vuota su $N \times N$ è un sottoinsieme di $N \times N$ che non contiene alcuna coppia ordinata. La relazione vuota sull'insieme vuoto è un sottoinsieme dell'insieme vuoto, che non contiene alcun elemento. \\ \\
+\textbf{Domanda}: Relazioni simmetriche e antisimmetriche in contemporanea. \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Quali sono le proprietà delle relazioni che vengono preservate da intersezione e unione
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Se faccio intersezione di due relazioni riflessive quello che ottengo è ancora una relazione riflessiva? \\
+\textbf{Risposta}: Sì, l'intersezione di due relazioni riflessive è ancora una relazione riflessiva. Lo dimostriamo prendendo due insiemi $R1$ e $R2$ riflessivi, la loro intersezione è riflessiva perché prendo gli elementi che sono sia nel primo che nel secondo insieme, essendo questi elementi riflessivi anche l'intersezione sarà riflessiva \\ \\
+\textbf{Domanda}: L'intersezione preserva la simmetria? \\
+\textbf{Risposta}: Sì \\ \\
+\textbf{Domanda}: L'unione preserva la transitività? \\
+\textbf{Risposta}: No, se unisco due relazioni transitive non ottengo una relazione transitiva \\ \\
+\textbf{Domanda}: Se ho due funzioni iniettive e le compongo la funzione composta è innettiva? \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Se ho due funzioni suriettive e le compongo la funzione composta è suriettiva? \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Se $f$ e $g$ sono funzioni dove non so nulla ma so che la loro composta è iniettiva, posso concludere che sia $f$ che $g$ sono due funzioni iniettive? \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Dammi una relazione transitiva e una non transitiva sugli insiemi dei booleani. \\
+\textbf{Risposta}: \\ \\
 
 
 \subsection{Funzioni}
 \textbf{Domanda}: Una funzione è un particolare tipo di relazione, una funzione è invertibile se e solo se vista e considerata come relazione è una relazione simmetrica. \\
 \textbf{Risposta}: Quindi è una relazione binaria su un insieme dato che va da $A$ in $A$. Per dimostrare che una funzione è invertibile deve essere biunivoca ossia suriettiva e iniettiva. \\ \\
-
+\textbf{Domanda}: supponiamo di avere una funzione da $A$ in $A$. $f: f = f \circ f$ (idempotenza) dammi esempi dove questo avviene (no identità) \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: trovare delle condizioni necessarie e sufficenti affinchè questo avvenga, quali sono le proprietà che deve avere questa funzione $f \times f = f \circ f$ \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Cos'è una funzione da $A$ in $B$? \\
+\textbf{Risposta}: E' una relazione tale che per $ \forall a \in A \exists b \in B: a R b$ \\ \\
+\textbf{Domanda}: Quando una funzione da A in B si dice iniettiva? \\
+\textbf{Risposta}: $f$ è iniettiva $ \forall a,b \in A$ se $f(a) = f(b) \Rightarrow a = b$ \\ \\
+\textbf{Domanda}: Se ho due funzioni iniettive e faccio la composizione di queste funzioni, quello che ottengo è una funzione iniettiva? \\
+\textbf{Risposta}: Sì, la composizione di due funzioni iniettive è iniettiva. \\ \\
+\textbf{Domanda}: Se ho una composizione iniettiva allora g e f sono iniettive? \\
+\textbf{Risposta}: No, $f$ e $g$ potrebbero correggere la non iniettività di una delle due funzioni\\ \\
+\textbf{Domanda}: Se ho due funzioni suriettive e le compongo la funzione composta è suriettiva? \\
+\textbf{Risposta}: Sì, la composizione di due funzioni suriettive è suriettiva. \\ \\
+\textbf{Domanda}: La composizione di $f$ e $g$ è suriettiva ma implica che $f$ e $g$ lo siano? \\
+\textbf{Risposta}: No, però $g$ deve essere suriettiva altrimenti la composizione non lo sarebbe. \\ \\
+\textbf{Domanda}: Se $f$ e $g$ sono funzioni dove non so nulla ma so che la loro composta è iniettiva, posso concludere che sia f che g sono due funzioni iniettive? (riflessione della proprietà)\\
+\textbf{Risposta}: \\ \\
 
 \subsection{Cardinalità}
 \textbf{Domanda}:le relazioni SAS (sono le relazioni simmetriche e antisimmetriche contemporaneamente) e TAT (le relazioni transistive e antitransitiva). Son di più le relazioni SAS o TAT? \\
@@ -364,7 +403,10 @@ L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è 
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: Tirar fuori la cardinalità 49 dall’insieme 7 usando le funzioni \\
 \textbf{Risposta}: Se ho un insieme $A$ e un insieme $B$ la cardinalità delle funzioni da $A$ a $B$ è $B^A$. Voglio sapere le funzioni iniettive (tutto il dominio è mappato nel codominio), quindi ci sono tante funzioni iniettive quante le permutazioni di 7 ossia $7!$. L'insieme delle parti di 7 è $2^7$ ed è l'insieme di tutte le funzioni da 7 in bool, gli elementi di $7 \times 7$ è 49 (tanti quanti da bool a giorni della settimana). \\ \\
-
+\textbf{Domanda}: l'insieme dei numeri maturali è equipotente alle coppie di numeri naturali? \\
+\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Capire se $N$ e $N*$ (stella di clini) sono equipotenti. \\
+\textbf{Risposta}: \\ \\
 
 
 \subsection{Sistema di Hilbert}
@@ -382,7 +424,10 @@ Una dimostrazione è una sequenza di formule in cui ciascuna formula nella seque
 
 
 \subsection{Algebra di boole}
-\textbf{Domanda}:
+\textbf{Domanda}: Esiste un algebra di boole che ha 4 elementi? \\
+\textbf{Risposta}: Sì, è l'insieme che contiene insieme vuoto, true, false, (true, false). \\ \\
+\textbf{Domanda}: Esiste un algebra di boole con 3 elementi? \\
+\textbf{Risposta}: \\ \\
 
 
 \subsection{Logica}
@@ -399,5 +444,60 @@ Quindi traducendo abbiamo $\overline{A} \rightarrow B \rightarrow \overline{B} \
 \end{itemize}
 \textbf{Domanda}: Che cos'è una dimostrazione \\
 \textbf{Risposta}: Una sequenza di formule che contiene o deduzioni o istanze di assiomi o premesse, l'ultima della quale è $C$ nel caso sopra. \\ \\
-
+\textbf{Domanda}: $a \lor b = a \iff a \land b = b$ ti torna?
+\textbf{Risposta}: Se una cosa è vera nel mondo degli insiemi sicuramente è vera nell'algebra di boole, per il \textbf{Teorema di Stone} che dice che le algebre fatte in modo tale che i suoi elementi sono insieme, che l'unione corrisponde al join ecc sono totalmente generali. Quindi se decidiamo di dimostrarlo negli insiemi sarà dimostrato anche per qualunque algebra di boole. Prendiamo quindi sue insiemi $a$ e $b$
+prendo l'unione di $a$ e $b$ se è uguale ad $a$ significa che la parte di $b$ non intersecata con $a$ è vuota, quindi $b$ è un sottoinsieme di $a$. oppure usiamo l'algebra di boole per dimostrare. \\
+\begin{itemize}
+    \item iniziamo con la prima direzione $a \lor b = a \Rightarrow a \land b = b$
+    \item si inizia dalla conclusione sapendo che per fare la dimostrazione posso usare l'ipotesi
+    \item il modo tipico di dimostrare è creare una catena di uguaglianze
+    \item $a \lor b$ sostituisco con l'ipotesi $a$
+    \item $(a \lor b) \land b$
+    \item possiamo applicare la proprietà di assorbimento
+    \item quindi $(a \lor b) \land b = b$ quindi $a \land b = b$ abbiamo dimostrato
+    \item ora dimostriamo l'altra direzione $a \lor b = a \Leftarrow a \land b = b$
+    \item $a \lor b = a \lor (a \land b)=a$ per proprietà assorbimento quindi dimostrato
+\end{itemize}
+\textbf{Domanda}: $a \land \overline{b} = \bot \iff a \lor b = b$
+\textbf{Risposta}:
+\begin{itemize}
+    \item $a \lor b = b$ significa che $a \subseteq b$ quindi $a \leq b$
+    \item nel mondo degli insiemi il bottom corrisponde all'insieme vuoto mentre il top è l'intero universo
+    \item insiemisticamente $a \subseteq b$
+\end{itemize}
+Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
+\begin{itemize}
+    \item $a \land \overline{b} = \bot \iff a \lor b = b$
+    \item scegliamo una delle due direzioni
+    \item scegliamo quindi $a \lor b b$ come ipotesi e dimostriamo $a \land \overline{b} = \bot$
+    \item quindi usiamo De Morgan
+    \item $\bot = \bot \land \overline{b} = (a \land \overline{a}) \land \overline{b} = a \land (\overline{a} \land \overline{b}) = a \land \overline(a \lor b) = (a \lor \overline{b})$
+    \item perchè ricordiamo $\bot \land a = \bot$ e $\top \lor a = \top$
+\end{itemize} \\ \\
+\textbf{Domanda}: quanti modelli ci sono se ho solo 3 simboli proposizionali? \\
+\textbf{Risposta}: $2 \times 2 \times 2$ ossia $2^3 = 8$\\ \\
+\textbf{Domanda}: supponiamo che i simboli proposizionali siano 3: $A, B, C$ quanti modelli ci sono dove la formula $A \rightarrow B$ è vera? \\
+\textbf{Risposta}: ci sono 6 modelli
+\begin{enumerate}
+    \item $A = \top, B = \top, C = \top \quad \therefore B$ è vera
+    \item $A = \top, B = \top, C = \bot \quad \therefore B$ è vera
+    \item $A = \top, B = \bot, C = \top \quad \therefore B$ è falsa
+    \item $A = \top, B = \bot, C = \bot \quad \therefore B$ è falsa
+    \item $A = \bot, B = \top, C = \top \quad \therefore B$ è vera
+    \item $A = \bot, B = \top, C = \bot \quad \therefore B$ è vera
+    \item $A = \bot, B = \bot, C = \top \quad \therefore B$ è vera
+    \item $A = \bot, B = \bot, C = \bot \quad \therefore B$ è vera
+\end{enumerate}
+\textbf{Domanda}: e se la mia formula fosse $A \rightarrow (B \rightarrow A)$ (sempre considerando che i simboli proposizionali sono $A, B, C$) \\
+\textbf{Risposta}: ci sono 8 modelli
+\textbf{Domanda}: voglio dedurre la seguente formula $A \land B \rightarrow B$ usando Hilbert \\
+\textbf{Risposta}: Negli assiomi di Hilbert noi abbiamo solo il $\lnot$ e $\rightarrow$ sembrerebbe che non abbiamo $\lor \land$ ecc ma in realtà possiamo derivarli
+\begin{itemize}
+    \item $A \lor B = \overline{A} \rightarrow B$
+    \item $A \land B = \overline{A \rightarrow \overline{B}}$
+\end{itemize}
+quindi possiamo derivare la formula $A \land B \rightarrow B$
+\begin{itemize}
+    \item
+\end{itemize}
 \end{document}
