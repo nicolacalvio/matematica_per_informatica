@@ -266,6 +266,10 @@ Il \textbf{linguaggio} della logica proposizionale è composto da:
 \end{itemize}
 \end{itemize}
 
+\subsection{Deduzione e deduzione semantica}
+La \textbf{deduzione} si indica con il simbolo $\vdash$ e rappresenta la relazione tra una formula e un insieme di formule, indicando che la formula è deducibile dall'insieme di formule.
+La \textbf{deduzione semantica} si indica con il simbolo $\models$ e rappresenta la relazione tra una formula e un insieme di formule, indicando che la formula è vera in tutti i modelli dell'insieme di formule.
+
 \subsection{Semantica}
 La \textbf{semantica} si occupa del significato delle formule della logica, attribuendogli un valore di verità: vero ($\top$) o falso ($\bot$).
 
@@ -316,10 +320,11 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{11 settembre 2021}
     \item \textbf{20 dicembre 2021}
     \item \textbf{11 gennaio 2022}
-    \item \textbf{2 febbraio 2022} 01:19
+    \item \textbf{2 febbraio 2022}
     \item \textbf{3 novembre 2023}
     \item \textbf{24 novembre 2023}
     \item \textbf{8 dicembre 2023}
+    \item \textbf{2 aprile 2022}
 \end{itemize}
 
 \subsection{Insiemi}
@@ -332,8 +337,13 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: Dimostra l'uguaglianza $A - (B \cup C) = (A - B) \cap (A - C)$ \\
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: Cos'è la chiusura di un insieme rispetto ad una proprietà, esempio insieme delle coppie $(n, n+1)$ ossia funzione successore vista come insieme di Coppie, voglio la chiusura simmetrica \\
-\textbf{Risposta}: Per esempio abbiamo (6,7) vogliamo aggiungere la simmetria quindi agiungiamo la coppia (7,6) 01:19 2 febbraio
-
+\textbf{Risposta}: La chiusura simmetrica della funzione successore è costituita da tutte quelle coppie $(x,y)$ tali che $y$ è il successore di $x$ oppure $x$ è il successore di $y$\\ \\
+\textbf{Domanda}: Fammi la chiusura transitiva della funzione successore \\
+\textbf{Risposta}: La chiusura transitiva della funzione successore è l'insieme delle coppie $(x,y)$ in cui $x$ < $y$\\ \\
+\textbf{Domanda}: Qual è il più piccolo sovrainsieme della funzione successore che ha la proprietà di essere una funzione transitiva? \\
+\textbf{Risposta}: Minore stretto perchè è il sovrainsieme più grande\\ \\
+\textbf{Domanda}: Cos'è la chiusura transitiva e simmetrica della funzione successore (dobbiamo trovare la più piccola relazione simmetrica e transitiva che contiene come sottoinsieme la funzione successore)\\
+\textbf{Risposta}: Sono tutte le coppie $(x,y)$ tale che $x < y$ per simmetria anche tutte le coppie $y < x$ quindi è l'unione della relazione $<$ e $>$ \\ \\
 
 
 \subsection{Relazioni}
@@ -429,6 +439,7 @@ Una dimostrazione è una sequenza di formule in cui ciascuna formula nella seque
 \textbf{Risposta}: è una serie di passaggi logici, si parte da degli assiomi (che non richiedono dimostrazione)  ....\\ \\ 
 
 
+
 \subsection{Algebra di boole}
 \textbf{Domanda}: Esiste un algebra di boole che ha 4 elementi? \\
 \textbf{Risposta}: Sì, è l'insieme che contiene insieme vuoto, true, false, (true, false). \\ \\
@@ -511,4 +522,6 @@ quindi possiamo derivare la formula $A \land B \rightarrow B$
     \item terzo assioma di Hilbert $(\overline{A} \rightarrow \overline{B}) \rightarrow (B \rightarrow A)$
 \end{itemize}
 posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \rightarrow C)}{B \rightarrow (A \rightarrow C)}$, \\ la transitività $(A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (A \rightarrow C)$ e lo pseudo scoto
+\textbf{Domanda}: Cos'è correttezza e completezza?
+\textbf{Risposta}: La correttezza è la proprietà di un sistema logico che garantisce che tutte le formule dimostrabili siano vere. La completezza è la proprietà di un sistema logico che garantisce che tutte le formule vere siano dimostrabili. \\ \\
 \end{document}
