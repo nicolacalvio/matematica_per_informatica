@@ -321,10 +321,14 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{20 dicembre 2021}
     \item \textbf{11 gennaio 2022}
     \item \textbf{2 febbraio 2022}
+    \item \textbf{2 aprile 2022}
+    \item \textbf{13 giugno 2022}
     \item \textbf{3 novembre 2023}
     \item \textbf{24 novembre 2023}
     \item \textbf{8 dicembre 2023}
-    \item \textbf{2 aprile 2022}
+    \item \textbf{29 ottobre 2022}
+    \item \textbf{17 novembre 2022}    
+    \item \textbf{6 dicembre 2022}  46:18
 \end{itemize}
 
 \subsection{Insiemi}
@@ -399,6 +403,7 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: Se $f$ e $g$ sono funzioni dove non so nulla ma so che la loro composta è iniettiva, posso concludere che sia f che g sono due funzioni iniettive? (riflessione della proprietà)\\
 \textbf{Risposta}: \\ \\
 
+
 \subsection{Cardinalità}
 \textbf{Domanda}:le relazioni SAS (sono le relazioni simmetriche e antisimmetriche contemporaneamente) e TAT (le relazioni transistive e antitransitiva). Son di più le relazioni SAS o TAT? \\
 \textbf{Risposta}: Per confrontare la cardinalità delle relazioni che sono simultaneamente simmetriche e antisimmetriche (SAS) con quelle che sono sia transitive che antitransitive (TAT), consideriamo il concetto di infinità e le proprietà delle relazioni tra insiemi di numeri.
@@ -421,7 +426,9 @@ L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è 
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: Capire se $N$ e $N*$ (stella di clini) sono equipotenti. \\
 \textbf{Risposta}: \\ \\
-
+\textbf{Domanda}: Secondo te ci sono più elementi nell'insieme $bool \times nat$ ossia il prodotto cartesiano tra (true,false) e i naturali o le funzioni che vanno dai booleani ai naturali?
+\textbf{Risposta}: $bool \times nat$ è inifito, è l'insieme di tutte le coppie di cui il primo elemento è booleano e il secondo naturale, le funzioni da bool a nat sono anche esse infinite.
+In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \rightarrow nat$ quindi essi sono equipotenti.\\ \\
 
 \subsection{Sistema di Hilbert}
 \textbf{Domanda}: Dimostrami che $A \vdash A$ \\
@@ -524,4 +531,14 @@ quindi possiamo derivare la formula $A \land B \rightarrow B$
 posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \rightarrow C)}{B \rightarrow (A \rightarrow C)}$, \\ la transitività $(A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (A \rightarrow C)$ e lo pseudo scoto
 \textbf{Domanda}: Cos'è correttezza e completezza?
 \textbf{Risposta}: La correttezza è la proprietà di un sistema logico che garantisce che tutte le formule dimostrabili siano vere. La completezza è la proprietà di un sistema logico che garantisce che tutte le formule vere siano dimostrabili. \\ \\
+\textbf{Domanda}: Il seguente enunciato $(A \rightarrow \lnot A) \rightarrow false$ è vero quando\\
+\textbf{Risposta}: 
+\begin{itemize}
+    \item quando $A$ è vero?
+    \item quando $A$ è false?
+    \item $A \land \lnot A$ è vero
+    \item non è mai vero
+    \item è sempre vero
+\end{itemize}
+La risposta corretta è che l'enunciato $(A \rightarrow \lnot A) \rightarrow false$ è vera quando $A$ è vero, perchè l'implicazione $A \rightarrow \lnot A$ in questo caso sarebbe false, rendendo vero l'enunciato dato secondo le regole dell'implicazione. \\ \\
 \end{document}
