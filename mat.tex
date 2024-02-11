@@ -4,6 +4,7 @@
 \usepackage{amsmath} % for math symbols and equations
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{bussproofs}
 
 \title{Metodi matematici per l'informatica}
 \author{Nicola Calvio}
@@ -132,22 +133,22 @@ Una funzione da un insieme $A$ a un insieme $B$ è una relazione $R \subseteq A 
 
 \subsection{Tipi di Funzioni}
 \begin{itemize}
-\item \textbf{Iniettività}: Una funzione $f: A \rightarrow B$ è iniettiva se, per ogni $a_1, a_2 \in A$, $f(a_1) = f(a_2)$ implica $a_1 = a_2$. \\ Se due elementi di A sono uguali devono avere lo stesso elemento in B come corrispondente
-\item \textbf{Suriettività}: Una funzione $f: A \rightarrow B$ è suriettiva se, per ogni $b \in B$, esiste almeno un $a \in A$ tale che $f(a) = b$. \\ Ogni elemento in B deve avere un collegamento in A
-\item \textbf{Biettività}: Una funzione $f: A \rightarrow B$ è biettiva (o biunivoca) se è sia iniettiva che suriettiva. Ciò significa che $f$ stabilisce una corrispondenza uno-a-uno tra tutti gli elementi di $A$ e $B$.
+\item \textbf{Iniettività}: Una funzione $f: A \to B$ è iniettiva se, per ogni $a_1, a_2 \in A$, $f(a_1) = f(a_2)$ implica $a_1 = a_2$. \\ Se due elementi di A sono uguali devono avere lo stesso elemento in B come corrispondente
+\item \textbf{Suriettività}: Una funzione $f: A \to B$ è suriettiva se, per ogni $b \in B$, esiste almeno un $a \in A$ tale che $f(a) = b$. \\ Ogni elemento in B deve avere un collegamento in A
+\item \textbf{Biettività}: Una funzione $f: A \to B$ è biettiva (o biunivoca) se è sia iniettiva che suriettiva. Ciò significa che $f$ stabilisce una corrispondenza uno-a-uno tra tutti gli elementi di $A$ e $B$.
 \end{itemize}
 
 \subsection{Funzione Inversa e Equipotenza}
 \begin{itemize}
-\item \textbf{Funzione Inversa}: Se $f: A \rightarrow B$ è biettiva, esiste una funzione inversa $f^{-1}: B \rightarrow A$ tale che $f^{-1}(f(a)) = a$ per ogni $a \in A$ e $f(f^{-1}(b)) = b$ per ogni $b \in B$.
-\item \textbf{Equipotenza}: Due insiemi $A$ e $B$ sono equipotenti se esiste una funzione biettiva $f: A \rightarrow B$.
+\item \textbf{Funzione Inversa}: Se $f: A \to B$ è biettiva, esiste una funzione inversa $f^{-1}: B \to A$ tale che $f^{-1}(f(a)) = a$ per ogni $a \in A$ e $f(f^{-1}(b)) = b$ per ogni $b \in B$.
+\item \textbf{Equipotenza}: Due insiemi $A$ e $B$ sono equipotenti se esiste una funzione biettiva $f: A \to B$.
 \end{itemize}
 
 \subsection{Composizione e Proprietà}
 \begin{itemize}
 \item La composizione di due funzioni mantiene certe proprietà: la composizione di due funzioni iniettive è iniettiva; la composizione di due funzioni suriettive è suriettiva; la composizione di due funzioni biettive è biettiva.
 \item Invertendo l’ordine delle coppie di una funzione non iniettiva si ottiene una relazione che non è necessariamente una funzione, perché potrebbero esserci elementi in $B$ associati a più elementi in $A$.
-\item Una funzione $f: A \rightarrow B$ è biettiva se e solo se invertendo l’ordine delle sue coppie si ottiene una funzione, la quale è l'inversa di $f$ e si indica con $f^{-1}: B \rightarrow A$.
+\item Una funzione $f: A \to B$ è biettiva se e solo se invertendo l’ordine delle sue coppie si ottiene una funzione, la quale è l'inversa di $f$ e si indica con $f^{-1}: B \to A$.
 \end{itemize}
 
 \subsection{Considerazioni Aggiuntive}
@@ -225,13 +226,13 @@ Gli assiomi di Hilbert sono formule di base in un sistema logico che, insieme al
 
 \subsection{Assiomi}
 \begin{itemize}
-    \item $A \rightarrow (B \rightarrow A)$
-    \item $(A \rightarrow (B \rightarrow C)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C))$
-    \item $(\neg A \rightarrow \neg B) \rightarrow (B \rightarrow A)$
+    \item $A \to (B \to A)$
+    \item $(A \to (B \to C)) \to ((A \to B) \to (A \to C))$
+    \item $(\neg A \to \neg B) \to (B \to A)$
 \end{itemize}
 
 \subsection{Regola di Inferenza}
-La \textbf{modus ponens} è l'unica regola di inferenza nel sistema di Hilbert, che afferma: se abbiamo $A$ e $A \rightarrow B$, allora possiamo dedurre $B$.
+La \textbf{modus ponens} è l'unica regola di inferenza nel sistema di Hilbert, che afferma: se abbiamo $A$ e $A \to B$, allora possiamo dedurre $B$.
 
 \subsubsection{Esempio}
 Se abbiamo una formula che afferma "se piove allora porto l'ombrello" e un'affermazione che dice "piove", allora possiamo dedurre "porto l'ombrello".
@@ -245,7 +246,7 @@ Una derivazione è una sequenza di formule dove ogni formula è un'istanza di un
 
 \subsection{Formula della Transitività dell'Implicazione}
 La transitività dell'implicazione è espressa dalla formula:
-\[(A \rightarrow B) \land (B \rightarrow C) \rightarrow (A \rightarrow C)\]
+\[(A \to B) \land (B \to C) \to (A \to C)\]
 
 \newpage
 \section{Logica Proposizionale}
@@ -258,7 +259,7 @@ Il \textbf{linguaggio} della logica proposizionale è composto da:
 \item \textbf{Simboli proposizionali atomici}: Sono le lettere che rappresentano proposizioni semplici e indivisibili, come $p$, $q$, $r$, ecc.
 \item \textbf{Operatori logici}: Sono utilizzati per costruire formule più complesse a partire da quelle semplici. Gli operatori includono:
 \begin{itemize}
-\item \textbf{Implicazione} ($\rightarrow$): Indica una relazione di conseguenza logica.
+\item \textbf{Implicazione} ($\to$): Indica una relazione di conseguenza logica.
 \item \textbf{Negazione} ($\neg$): Esprime il contrario di una proposizione.
 \item \textbf{Disgiunzione} ($\lor$): Corrisponde all'operatore logico "or".
 \item \textbf{Coniunzione} ($\land$): Corrisponde all'operatore logico "and".
@@ -295,8 +296,8 @@ Le regole di decomposizione per i vari operatori logici sono le seguenti:
     \item \textbf{Negazione} ($\neg$): La negazione di una proposizione atomica o di una formula complessa viene decomposta invertendo il suo valore di verità.
     \item \textbf{Coniunzione} ($\land$): Una formula del tipo $A \land B$ viene decomposta in due rami, uno per $A$ e uno per $B$, che devono entrambi essere veri.
     \item \textbf{Disgiunzione} ($\lor$): Una formula del tipo $A \lor B$ genera due sottorami separati, uno con $A$ vero e l'altro con $B$ vero, indicando che almeno uno dei due deve essere vero.
-    \item \textbf{Implicazione} ($\rightarrow$): Un'implicazione $A \rightarrow B$ viene trattata come $\neg A \lor B$, generando due sottorami: uno con $A$ falso e l'altro con $B$ vero.
-    \item \textbf{Doppia implicazione} ($\leftrightarrow$): Una doppia implicazione $A \leftrightarrow B$ viene decomposta in due parti: $A \rightarrow B$ e $B \rightarrow A$.
+    \item \textbf{Implicazione} ($\to$): Un'implicazione $A \to B$ viene trattata come $\neg A \lor B$, generando due sottorami: uno con $A$ falso e l'altro con $B$ vero.
+    \item \textbf{Doppia implicazione} ($\leftrightarrow$): Una doppia implicazione $A \leftrightarrow B$ viene decomposta in due parti: $A \to B$ e $B \to A$.
 \end{itemize}
 
 \subsection{Chiusura del Tableau}
@@ -305,7 +306,7 @@ Un ramo del tableau si dice \textit{chiuso} se contiene una contraddizione, ovve
 
 \subsection{Esempio di Applicazione}
 
-Consideriamo la formula $(P \rightarrow Q) \land (\neg Q \lor R)$. Per analizzarla con un tableau proposizionale, si inizia scrivendo la formula sulla cima del tableau e poi si procede a decomporla seguendo le regole sopra descritte, espandendo l'albero fino a raggiungere proposizioni atomiche o contraddizioni.
+Consideriamo la formula $(P \to Q) \land (\neg Q \lor R)$. Per analizzarla con un tableau proposizionale, si inizia scrivendo la formula sulla cima del tableau e poi si procede a decomporla seguendo le regole sopra descritte, espandendo l'albero fino a raggiungere proposizioni atomiche o contraddizioni.
 
 \subsection{Conclusioni}
 
@@ -329,6 +330,8 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{29 ottobre 2022}
     \item \textbf{17 novembre 2022}    
     \item \textbf{6 dicembre 2022}
+    \item \textbf{27 dicembre 2022}
+    \item \textbf{7 gennaio 2023}
 \end{itemize}
 
 \subsection{Insiemi}
@@ -391,7 +394,7 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: Cos'è una funzione da $A$ in $B$? \\
 \textbf{Risposta}: E' una relazione tale che per $ \forall a \in A \exists b \in B: a R b$ \\ \\
 \textbf{Domanda}: Quando una funzione da A in B si dice iniettiva? \\
-\textbf{Risposta}: $f$ è iniettiva $ \forall a,b \in A$ se $f(a) = f(b) \Rightarrow a = b$ \\ \\
+\textbf{Risposta}: $f$ è iniettiva $ \forall a,b \in A$ se $f(a) = f(b) \to a = b$ \\ \\
 \textbf{Domanda}: Se ho due funzioni iniettive e faccio la composizione di queste funzioni, quello che ottengo è una funzione iniettiva? \\
 \textbf{Risposta}: Sì, la composizione di due funzioni iniettive è iniettiva. \\ \\
 \textbf{Domanda}: Se ho una composizione iniettiva allora g e f sono iniettive? \\
@@ -402,6 +405,20 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Risposta}: No, però $g$ deve essere suriettiva altrimenti la composizione non lo sarebbe. \\ \\
 \textbf{Domanda}: Se $f$ e $g$ sono funzioni dove non so nulla ma so che la loro composta è iniettiva, posso concludere che sia f che g sono due funzioni iniettive? (riflessione della proprietà)\\
 \textbf{Risposta}: \\ \\
+\textbf{Domanda}: Fammi l'esempio di una funzione che sia iniettiva e non suriettiva. \\
+\textbf{Risposta}: $f(x) = \frac{1}{x}$ codominio: $\mathbb{R}$ dominio: $\mathbb{R} \neq 0$ non è suriettiva poichè nel codominio ha un elemento che è 0 che non ha corrispondenza nel dominio.\\ \\
+\textbf{Domanda}: Fammi l'esempio di una funzione che sia suriettiva e non iniettiva. \\
+\textbf{Risposta}: funzione per i numeri pari/dispari dominio: $\mathbb{N}$ codominio: booleani \\ \\
+\textbf{Domanda}: Definizione di una funzione \\
+\textbf{Risposta}: Una funzione è una relazione binaria su due insiemi $A$ e $B$ tale che per ogni elemento $a$ in $A$ esiste un unico elemento $b$ in $B$ tale che $(a,b)$ appartiene alla relazione. \\ \\
+\textbf{Domanda}: trova una funzione (che se vista come relazione) ha la proprietà di essere simmetrica. \\
+\textbf{Risposta}: $f(x)=x$ \\ \\
+\textbf{Domanda}: Quale proprietà non ha la funzione identità sui $\mathbb{N}$? \\
+\textbf{Risposta}: Non è anti riflessiva \\ \\
+\textbf{Domanda}: Dammi l'esempio di una funzione che vista come relazione è simmetrica \\
+\textbf{Risposta}: $f(x) = -x$ sui numeri $mathbb{N}$\\ \\
+\textbf{Domanda}: Fammi l'esempio di una funzione transitiva. \\
+\textbf{Risposta}:  \\ \\
 
 
 \subsection{Cardinalità}
@@ -428,19 +445,19 @@ L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è 
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: Secondo te ci sono più elementi nell'insieme $bool \times nat$ ossia il prodotto cartesiano tra (true,false) e i naturali o le funzioni che vanno dai booleani ai naturali?
 \textbf{Risposta}: $bool \times nat$ è inifito, è l'insieme di tutte le coppie di cui il primo elemento è booleano e il secondo naturale, le funzioni da bool a nat sono anche esse infinite.
-In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \rightarrow nat$ quindi essi sono equipotenti.\\ \\
+In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \to nat$ quindi essi sono equipotenti.\\ \\
 
 \subsection{Sistema di Hilbert}
 \textbf{Domanda}: Dimostrami che $A \vdash A$ \\
-\textbf{Risposta}: Significa che $A$ è deducibile da $A, A \rightarrow ((A \rightarrow A) \rightarrow A)$ istanza del primo assioma,
-prendendo il secondo assioma $(A \rightarrow ((A \rightarrow A) \rightarrow A)) \rightarrow (A \rightarrow (A \rightarrow A)) \rightarrow (A \rightarrow A)$
-applichiamo il modus ponens alle 2 ne deduciamo $(A \rightarrow (A \rightarrow A)) \rightarrow A \rightarrow A$ ora dobbiamo dimostrarla.\\
-Dal primo assioma prendiamo un altra istanza $A \rightarrow (A \rightarrow A)$ ora applichiamo modus ponens e arriviamo ad $A \rightarrow A$ quindi per il teorema di deduzione
+\textbf{Risposta}: Significa che $A$ è deducibile da $A, A \to ((A \to A) \to A)$ istanza del primo assioma,
+prendendo il secondo assioma $(A \to ((A \to A) \to A)) \to (A \to (A \to A)) \to (A \to A)$
+applichiamo il modus ponens alle 2 ne deduciamo $(A \to (A \to A)) \to A \to A$ ora dobbiamo dimostrarla.\\
+Dal primo assioma prendiamo un altra istanza $A \to (A \to A)$ ora applichiamo modus ponens e arriviamo ad $A \to A$ quindi per il teorema di deduzione
 sappiamo che da A si deriva A. \\ \\
 \textbf{Domanda}: Cos'è un sequente? \\
 \textbf{Risposta}: La formula che sta a destra del simbolo di deduzione è derivabile da ciò che sta a sinistra, vuol dire che esiste una dimostrazione di ciò che sta a destra usando quello che sta a sinistra. \\
 Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens.
-\textbf{Domanda}: Questo sequente è corretto? $B, B \rightarrow A, A \rightarrow C \vdash C$ \\
+\textbf{Domanda}: Questo sequente è corretto? $B, B \to A, A \to C \vdash C$ \\
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: cos'è una dimostrazione? \\
 \textbf{Risposta}: è una serie di passaggi logici, si parte da degli assiomi (che non richiedono dimostrazione)  ....\\ \\ 
@@ -455,16 +472,16 @@ Una dimostrazione è una sequenza di formule in cui ciascuna formula nella seque
 
 
 \subsection{Logica}
-\textbf{Domanda}: Dimostrare che $A \lor B \rightarrow B \lor A$
-\textbf{Risposta}: Si può fare con le tavole di verità, con Hilbert o con i Tableau. Risolvendo con gli assiomi di Hilbert possiamo modificare la formula usando solo $\lnot$ e $\rightarrow$. In questo caso $A \lor B$ diventa $\overline{A} \rightarrow B$. \\
-Quindi traducendo abbiamo $\overline{A} \rightarrow B \rightarrow \overline{B} \rightarrow A$. Possiamo anche dimostrare con Tableau, prendo la formula e la nego poi applico Tableau e dimostro che costruisco un albero chiuso, questo significa che la formula negata non è soddisfacibile \\ \\
-\textbf{Domanda}: Supponiamo di prendere la formula $\vdash (A \rightarrow (B \rightarrow C)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C))$ \\
+\textbf{Domanda}: Dimostrare che $A \lor B \to B \lor A$
+\textbf{Risposta}: Si può fare con le tavole di verità, con Hilbert o con i Tableau. Risolvendo con gli assiomi di Hilbert possiamo modificare la formula usando solo $\lnot$ e $\to$. In questo caso $A \lor B$ diventa $\overline{A} \to B$. \\
+Quindi traducendo abbiamo $\overline{A} \to B \to \overline{B} \to A$. Possiamo anche dimostrare con Tableau, prendo la formula e la nego poi applico Tableau e dimostro che costruisco un albero chiuso, questo significa che la formula negata non è soddisfacibile \\ \\
+\textbf{Domanda}: Supponiamo di prendere la formula $\vdash (A \to (B \to C)) \to ((A \to B) \to (A \to C))$ \\
 \textbf{Risposta}: Per dimostrare l'assioma possiamo usare il teorema di deduzione e il modus ponens
 \begin{itemize}
-    \item $A \rightarrow (B \rightarrow C) \vdash (A \rightarrow B) \rightarrow (A \rightarrow C)$
+    \item $A \to (B \to C) \vdash (A \to B) \to (A \to C)$
     \item poi applichiamo di nuovo il teorema di deduzione
-    \item $A \rightarrow (B \rightarrow C), A \rightarrow B \vdash A \rightarrow C$
-    \item $(A \rightarrow B), A, A \rightarrow (B \rightarrow C) \vdash C$
+    \item $A \to (B \to C), A \to B \vdash A \to C$
+    \item $(A \to B), A, A \to (B \to C) \vdash C$
 \end{itemize}
 \textbf{Domanda}: Che cos'è una dimostrazione \\
 \textbf{Risposta}: Una sequenza di formule che contiene o deduzioni o istanze di assiomi o premesse, l'ultima della quale è $C$ nel caso sopra. \\ \\
@@ -472,7 +489,7 @@ Quindi traducendo abbiamo $\overline{A} \rightarrow B \rightarrow \overline{B} \
 \textbf{Risposta}: Se una cosa è vera nel mondo degli insiemi sicuramente è vera nell'algebra di boole, per il \textbf{Teorema di Stone} che dice che le algebre fatte in modo tale che i suoi elementi sono insieme, che l'unione corrisponde al join ecc sono totalmente generali. Quindi se decidiamo di dimostrarlo negli insiemi sarà dimostrato anche per qualunque algebra di boole. Prendiamo quindi sue insiemi $a$ e $b$
 prendo l'unione di $a$ e $b$ se è uguale ad $a$ significa che la parte di $b$ non intersecata con $a$ è vuota, quindi $b$ è un sottoinsieme di $a$. oppure usiamo l'algebra di boole per dimostrare. \\
 \begin{itemize}
-    \item iniziamo con la prima direzione $a \lor b = a \Rightarrow a \land b = b$
+    \item iniziamo con la prima direzione $a \lor b = a \to a \land b = b$
     \item si inizia dalla conclusione sapendo che per fare la dimostrazione posso usare l'ipotesi
     \item il modo tipico di dimostrare è creare una catena di uguaglianze
     \item $a \lor b$ sostituisco con l'ipotesi $a$
@@ -500,7 +517,7 @@ Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
 \end{itemize}
 \textbf{Domanda}: quanti modelli ci sono se ho solo 3 simboli proposizionali? \\
 \textbf{Risposta}: $2 \times 2 \times 2$ ossia $2^3 = 8$\\ \\
-\textbf{Domanda}: supponiamo che i simboli proposizionali siano 3: $A, B, C$ quanti modelli ci sono dove la formula $A \rightarrow B$ è vera? \\
+\textbf{Domanda}: supponiamo che i simboli proposizionali siano 3: $A, B, C$ quanti modelli ci sono dove la formula $A \to B$ è vera? \\
 \textbf{Risposta}: ci sono 6 modelli
 \begin{enumerate}
     \item $A = \top, B = \top, C = \top \quad \therefore B$ è vera
@@ -512,26 +529,26 @@ Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
     \item $A = \bot, B = \bot, C = \top \quad \therefore B$ è vera
     \item $A = \bot, B = \bot, C = \bot \quad \therefore B$ è vera
 \end{enumerate}
-\textbf{Domanda}: e se la mia formula fosse $A \rightarrow (B \rightarrow A)$ (sempre considerando che i simboli proposizionali sono $A, B, C$) \\
+\textbf{Domanda}: e se la mia formula fosse $A \to (B \to A)$ (sempre considerando che i simboli proposizionali sono $A, B, C$) \\
 \textbf{Risposta}: ci sono 8 modelli
-\textbf{Domanda}: voglio dedurre la seguente formula $A \land B \rightarrow B$ usando Hilbert \\
-\textbf{Risposta}: Negli assiomi di Hilbert noi abbiamo solo il $\lnot$ e $\rightarrow$ sembrerebbe che non abbiamo $\lor \land$ ecc ma in realtà possiamo derivarli
+\textbf{Domanda}: voglio dedurre la seguente formula $A \land B \to B$ usando Hilbert \\
+\textbf{Risposta}: Negli assiomi di Hilbert noi abbiamo solo il $\lnot$ e $\to$ sembrerebbe che non abbiamo $\lor \land$ ecc ma in realtà possiamo derivarli
 \begin{itemize}
-    \item $A \lor B = \overline{A} \rightarrow B$
-    \item $A \land B = \overline{A \rightarrow \overline{B}}$
+    \item $A \lor B = \overline{A} \to B$
+    \item $A \land B = \overline{A \to \overline{B}}$
 \end{itemize}
-quindi possiamo derivare la formula $A \land B \rightarrow B$
+quindi possiamo derivare la formula $A \land B \to B$
 \begin{itemize}
-    \item $\overline{A \rightarrow \overline{B}} \rightarrow B$
-    \item $\overline{B} \rightarrow (A \rightarrow \overline{B})$ è una particolare istanza del primo assioma di Hilbert
-    \item $(A \rightarrow \overline{B}) \rightarrow \overline{\overline{A \rightarrow \overline{B}}}$ sto assumendo che $A \rightarrow \overline{\overline{A}}$
-    \item applico la transitività $\overline{B} \rightarrow \overline{\overline{A \rightarrow \overline{B}}}$
-    \item terzo assioma di Hilbert $(\overline{A} \rightarrow \overline{B}) \rightarrow (B \rightarrow A)$
+    \item $\overline{A \to \overline{B}} \to B$
+    \item $\overline{B} \to (A \to \overline{B})$ è una particolare istanza del primo assioma di Hilbert
+    \item $(A \to \overline{B}) \to \overline{\overline{A \to \overline{B}}}$ sto assumendo che $A \to \overline{\overline{A}}$
+    \item applico la transitività $\overline{B} \to \overline{\overline{A \to \overline{B}}}$
+    \item terzo assioma di Hilbert $(\overline{A} \to \overline{B}) \to (B \to A)$
 \end{itemize}
-posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \rightarrow C)}{B \rightarrow (A \rightarrow C)}$, \\ la transitività $(A \rightarrow B) \rightarrow (B \rightarrow C) \rightarrow (A \rightarrow C)$ e lo pseudo scoto
+posso usare alcune cose come lo scambio di premesse $\dfrac{A \to (B \to C)}{B \to (A \to C)}$, \\ la transitività $(A \to B) \to (B \to C) \to (A \to C)$ e lo pseudo scoto
 \textbf{Domanda}: Cos'è correttezza e completezza?
 \textbf{Risposta}: La correttezza è la proprietà di un sistema logico che garantisce che tutte le formule dimostrabili siano vere. La completezza è la proprietà di un sistema logico che garantisce che tutte le formule vere siano dimostrabili. \\ \\
-\textbf{Domanda}: Il seguente enunciato $(A \rightarrow \lnot A) \rightarrow false$ è vero quando\\
+\textbf{Domanda}: Il seguente enunciato $(A \to \lnot A) \to false$ è vero quando\\
 \textbf{Risposta}: 
 \begin{itemize}
     \item quando $A$ è vero?
@@ -540,16 +557,35 @@ posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \ri
     \item non è mai vero
     \item è sempre vero
 \end{itemize}
-La risposta corretta è che l'enunciato $(A \rightarrow \lnot A) \rightarrow false$ è vera quando $A$ è vero, perchè l'implicazione $A \rightarrow \lnot A$ in questo caso sarebbe false, rendendo vero l'enunciato dato secondo le regole dell'implicazione. \\ \\
-\textbf{Domanda}: $(A \land B) \rightarrow [C \rightarrow (A \land C)]$ dimostralo \\ 
-\textbf{Risposta}: traduco in formule logicamente equivalenti con not e implica $A \lor B \equiv \lnot A \rightarrow B$ e $A \land B \equiv \lnot (A \rightarrow \lnot B)$.
-Dimostriamo quindi creando due lemmi $A \land B \rightarrow A$ e $A \rightarrow [C \rightarrow (A \land C)]$.
-Se riusciamo a dimostrare questi due lemmi per la proprietà transitiva $(A \land B) \rightarrow [C \rightarrow (A \land C)]$.
-Dimostriamo quindi $A \land B \rightarrow A$ e la riscriviamo come $\lnot(A \rightarrow \lnot B) \rightarrow A$.
+La risposta corretta è che l'enunciato $(A \to \lnot A) \to false$ è vera quando $A$ è vero, perchè l'implicazione $A \to \lnot A$ in questo caso sarebbe false, rendendo vero l'enunciato dato secondo le regole dell'implicazione. \\ \\
+\textbf{Domanda}: $(A \land B) \to [C \to (A \land C)]$ dimostralo \\ 
+\textbf{Risposta}: traduco in formule logicamente equivalenti con not e implica $A \lor B \equiv \lnot A \to B$ e $A \land B \equiv \lnot (A \to \lnot B)$.
+Dimostriamo quindi creando due lemmi $A \land B \to A$ e $A \to [C \to (A \land C)]$.
+Se riusciamo a dimostrare questi due lemmi per la proprietà transitiva $(A \land B) \to [C \to (A \land C)]$.
+Dimostriamo quindi $A \land B \to A$ e la riscriviamo come $\lnot(A \to \lnot B) \to A$.
 \begin{equation}
-    \dfrac{ \dfrac{\lnot A \rightarrow (A \rightarrow \lnot B)}{\lnot (A \rightarrow \lnot B) \rightarrow A }}{A \land B \rightarrow A}
+    \dfrac{ \dfrac{\lnot A \to (A \to \lnot B)}{\lnot (A \to \lnot B) \to A }}{A \land B \to A}
 \end{equation}
 Abbiamo quindi inverito l'implica negando le due proposizioni. Adesso applichiamo la deduzione. \\
-$\lnot A \vdash A \rightarrow \lnot B$, giro di nuovo negando: $\lnot A \vdash B \rightarrow \lnot A$. riapplichiamo teorema di deduzione. $\vdash \lnot A \rightarrow (B \rightarrow \lnot A)$ che non ho bisogno di dimostrare poiché primo assioma di Hilbert.
+$\lnot A \vdash A \to \lnot B$, giro di nuovo negando: $\lnot A \vdash B \to \lnot A$. riapplichiamo teorema di deduzione. $\vdash \lnot A \to (B \to \lnot A)$ che non ho bisogno di dimostrare poiché primo assioma di Hilbert.
  \\ \\
+\textbf{Domanda}: Dimostrare che $[(A \lor B) \to C] \to (A \to C)$ con il sistema di hilbert \\
+\textbf{Risposta}: Possiamo notare che è presente un $\lor$ quindi per risolverlo con il sistema di Hilbert dobbiamo convertirlo.
+Leggendo la formula capiamo che se $A$ o $B$ implica $C$ allora se so che vale $A$ valerà anche $C$. Se è vero $A$ allora $A$ OR $B$ è vero allora anche $C$ è vero. \\
+Associamo $\Gamma = (A \lor B) \to C, A$
+\begin{prooftree}
+    \AxiomC{$\vdash A \to (\lnot B \to A)$}
+    \UnaryInfC{$\vdash A \to ( \lnot A \to B) $}
+    \UnaryInfC{$A \vdash \lnot A \to B$}
+    \UnaryInfC{$\Gamma \vdash \lnot A \to B$}
+    \AxiomC{}
+    \BinaryInfC{$\Gamma \vdash A \lor B$}
+    \AxiomC{$\Gamma \vdash (A \lor B) \to C$  }
+    \BinaryInfC{$(A \lor B) \to C, A \vdash C$}
+    \UnaryInfC{$(A \lor B) \to C \vdash A \to C$}
+    \UnaryInfC{$\vdash [(A \lor B) \to C] \to (A \to C)$}
+\end{prooftree}    
+riconosciamo che il primo passaggio è l'assioma di Hilbert, il secondo è il teorema di deduzione, il terzo è il modus ponens, il quarto è il modus ponens, il quinto è il modus ponens, il sesto è il teorema di deduzione. \\ \\
+
 \end{document}
+

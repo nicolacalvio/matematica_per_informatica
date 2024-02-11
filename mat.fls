@@ -1,8 +1,8 @@
-PWD c:/Users/Nicola Calvio/Documents/matematica_per_informatica
+PWD c:/Users/info/Desktop/matematica_per_informatica
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Nicola Calvio/Documents/matematica_per_informatica/mat.tex
+INPUT c:/Users/info/Desktop/matematica_per_informatica/mat.tex
 OUTPUT mat.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -33,6 +33,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/bussproofs/bussproofs.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/bussproofs/bussproofs.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./mat.aux
