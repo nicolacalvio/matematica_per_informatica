@@ -328,7 +328,7 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{8 dicembre 2023}
     \item \textbf{29 ottobre 2022}
     \item \textbf{17 novembre 2022}    
-    \item \textbf{6 dicembre 2022}  46:18
+    \item \textbf{6 dicembre 2022}
 \end{itemize}
 
 \subsection{Insiemi}
@@ -541,4 +541,15 @@ posso usare alcune cose come lo scambio di premesse $\dfrac{A \rightarrow (B \ri
     \item è sempre vero
 \end{itemize}
 La risposta corretta è che l'enunciato $(A \rightarrow \lnot A) \rightarrow false$ è vera quando $A$ è vero, perchè l'implicazione $A \rightarrow \lnot A$ in questo caso sarebbe false, rendendo vero l'enunciato dato secondo le regole dell'implicazione. \\ \\
+\textbf{Domanda}: $(A \land B) \rightarrow [C \rightarrow (A \land C)]$ dimostralo \\ 
+\textbf{Risposta}: traduco in formule logicamente equivalenti con not e implica $A \lor B \equiv \lnot A \rightarrow B$ e $A \land B \equiv \lnot (A \rightarrow \lnot B)$.
+Dimostriamo quindi creando due lemmi $A \land B \rightarrow A$ e $A \rightarrow [C \rightarrow (A \land C)]$.
+Se riusciamo a dimostrare questi due lemmi per la proprietà transitiva $(A \land B) \rightarrow [C \rightarrow (A \land C)]$.
+Dimostriamo quindi $A \land B \rightarrow A$ e la riscriviamo come $\lnot(A \rightarrow \lnot B) \rightarrow A$.
+\begin{equation}
+    \dfrac{ \dfrac{\lnot A \rightarrow (A \rightarrow \lnot B)}{\lnot (A \rightarrow \lnot B) \rightarrow A }}{A \land B \rightarrow A}
+\end{equation}
+Abbiamo quindi inverito l'implica negando le due proposizioni. Adesso applichiamo la deduzione. \\
+$\lnot A \vdash A \rightarrow \lnot B$, giro di nuovo negando: $\lnot A \vdash B \rightarrow \lnot A$. riapplichiamo teorema di deduzione. $\vdash \lnot A \rightarrow (B \rightarrow \lnot A)$ che non ho bisogno di dimostrare poiché primo assioma di Hilbert.
+ \\ \\
 \end{document}
