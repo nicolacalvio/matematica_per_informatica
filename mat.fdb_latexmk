@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1707774701 "c:/Users/Nicola Calvio/Documents/matematica_per_informatica/mat.tex" "mat.pdf" "mat" 1707774702 0
-  "c:/Users/Nicola Calvio/Documents/matematica_per_informatica/mat.tex" 1707774697 47544 c3d2452164e7070d10a983e3ec21a552 ""
+["pdflatex"] 1707776569 "c:/Users/Nicola Calvio/Documents/matematica_per_informatica/mat.tex" "mat.pdf" "mat" 1707776570 0
+  "c:/Users/Nicola Calvio/Documents/matematica_per_informatica/mat.tex" 1707776567 48405 dab301ecbf3da101b24b42d29367ae28 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1703261525 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1703265110 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1703262317 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -62,8 +62,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1703287037 4785563 321aa554689bde33441a615ba7dae12f ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1703287209 8217693 60e5f5e9b9b6adc0f51081cf16786117 ""
   "c:/texlive/2023/texmf.cnf" 1703287017 713 e69b156964470283e0530f5060668171 ""
-  "mat.aux" 1707774702 6964 5ef524c68d1c2dda6fd938a44c524f57 "pdflatex"
-  "mat.tex" 1707774697 47544 c3d2452164e7070d10a983e3ec21a552 ""
+  "mat.aux" 1707776570 6964 1902dda06016849a733590053c4f24aa "pdflatex"
+  "mat.tex" 1707776567 48405 dab301ecbf3da101b24b42d29367ae28 ""
   (generated)
   "mat.aux"
   "mat.log"
