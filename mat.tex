@@ -332,6 +332,7 @@ questi esercizi sono tratti dali web seminar:
     \item \textbf{6 dicembre 2022}
     \item \textbf{27 dicembre 2022}
     \item \textbf{7 gennaio 2023}
+    \item \textbf{14 gennaio 2023}
 \end{itemize}
 
 \subsection{Insiemi}
@@ -382,7 +383,10 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: Dammi una relazione transitiva e una non transitiva sugli insiemi dei booleani. \\
 \textbf{Risposta}: \\ \\
-
+\textbf{Domanda}: Ho un insieme A che contiene i colori della bandiera italiana (ossia 3 elementi) voglio sapere quante sono le relazioni binarie riflessive su A\\
+\textbf{Risposta}: La relazione riflessiva è una relazione che $\forall a \in A: aRa$ e una relazione binaria su un insieme $A$ è un qualunque sottoinsieme del prodotto cartesiano $A \times A$. 
+Le possibili relazioni su $A$ riflessive, chiamiamo $R$ una relazione binaria su $A$ se tutte queste 3 coppie appartengono ad $R$ sono una relazione riflessiva.
+Queste relazioni sono  $2^9$ ossia la cardinalità delle parti e del prodotto cartesiano.\\ \\
 
 \subsection{Funzioni}
 \textbf{Domanda}: Una funzione è un particolare tipo di relazione, una funzione è invertibile se e solo se vista e considerata come relazione è una relazione simmetrica. \\
@@ -418,7 +422,7 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: Dammi l'esempio di una funzione che vista come relazione è simmetrica \\
 \textbf{Risposta}: $f(x) = -x$ sui numeri $mathbb{N}$\\ \\
 \textbf{Domanda}: Fammi l'esempio di una funzione transitiva. \\
-\textbf{Risposta}:  \\ \\
+\textbf{Risposta}:  l'identità è transitiva, $f(x)=|x|$ è transitiva \\ \\
 
 
 \subsection{Cardinalità}
@@ -446,6 +450,10 @@ L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è 
 \textbf{Domanda}: Secondo te ci sono più elementi nell'insieme $bool \times nat$ ossia il prodotto cartesiano tra (true,false) e i naturali o le funzioni che vanno dai booleani ai naturali?
 \textbf{Risposta}: $bool \times nat$ è inifito, è l'insieme di tutte le coppie di cui il primo elemento è booleano e il secondo naturale, le funzioni da bool a nat sono anche esse infinite.
 In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \to nat$ quindi essi sono equipotenti.\\ \\
+\textbf{Domanda}: A,B,C qualunque chi è più grande $A \times (B \times C)$ oppure $(A \times B) \times C$? \\
+\textbf{Risposta}: bisogna trovare una biiezione ossia $f: A \times (B \times C) \to (A \times B) \times C$ dove $f(a,(b,c))=((a,b),c)$\\ \\
+\textbf{Domanda}: Quante sono le funzioni da $A$ in $A$? \\
+\textbf{Risposta}: $3^3$ e le suriettive? $3!$ \\ \\
 
 \subsection{Sistema di Hilbert}
 \textbf{Domanda}: Dimostrami che $A \vdash A$ \\
@@ -469,6 +477,8 @@ Una dimostrazione è una sequenza di formule in cui ciascuna formula nella seque
 \textbf{Risposta}: Sì, è l'insieme che contiene insieme vuoto, true, false, (true, false). \\ \\
 \textbf{Domanda}: Esiste un algebra di boole con 3 elementi? \\
 \textbf{Risposta}: \\ \\
+\textbf{Domanda}: Considera l'algebra di heyting ha un elemento top, un bottom e due elementi A e B fra questi 2 elementi. Nelle algebre di Heyting l'implicazione è un operatore primitivo. $A \to B$ quindi cos'è? \\
+\textbf{Risposta}: Può essere considerata un algebra di boole poiché ogni elemento ha il suo complemento. $A \to B$ è $\lnot A \lor B$ ossia $B$\\ \\
 
 
 \subsection{Logica}
@@ -586,6 +596,17 @@ Associamo $\Gamma = (A \lor B) \to C, A$
     \UnaryInfC{$\vdash [(A \lor B) \to C] \to (A \to C)$}
 \end{prooftree}    
 riconosciamo che il primo passaggio è l'assioma di Hilbert, il secondo è il teorema di deduzione, il terzo è il modus ponens, il quarto è il modus ponens, il quinto è il modus ponens, il sesto è il teorema di deduzione. \\ \\
-
+\textbf{Domanda}: Quando due formule sono logicamente equivalenti? Dammi definizione ed esempio \\
+\textbf{Risposta}: Due formule sono logicamente equivalenti se e solo se sono vere nelle stesse circostanze. Ad esempio, le formule $A \lor B$ e $\lnot A \to B$ sono logicamente equivalenti. \\ \\
+\textbf{Domanda}: è vero che tutte le tautologie sono logicamente equivalenti fra loro? \\
+\textbf{Risposta}: Sì, tutte le tautologie sono logicamente equivalenti fra loro. Poiché tutte le tautologie sono vere in ogni possibile valutazione, segue che qualsiasi coppia di tautologie avrà lo stesso valore di verità (cioè, sempre vero)\\ \\
+\textbf{Domanda}: Tutte le formule logicamente insoddisfacibili sono logicamente equivalenti fra loro? \\
+\textbf{Risposta}: Falso Ciò significa che, indipendentemente dai valori di verità assegnati alle variabili proposizionali all'interno della formula, il risultato finale sarà sempre falso.\\ \\
+\textbf{Domanda}: Tutte le formule logicamente soddisfacibili sono logicamente equivalenti fra loro? \\
+\textbf{Risposta}: Falso, una formula è considerata logicamente soddisfacibile se esiste almeno una valutazione delle sue variabili proposizionali per cui la formula è vera \\ \\
+\textbf{Domanda}: Data la seguente formula $A \to (\lnot A \to B)$ è soddisfacibile, insoddisfacibile o valida?
+\textbf{Risposta}: è una tautologia, poichè l'ultima parte dell'implicazione è sempre vera. Dimostrala con Hilbert TODO! \\ \\
+\textbf{Domanda}: Qual è quella proprietà che dice che se una cosa è vera allora è deducibile? \\
+\textbf{Risposta}: Completezza \\ \\
 \end{document}
 
