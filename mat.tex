@@ -245,8 +245,23 @@ Un sequente è un'espressione in cui abbiamo un simbolo di deduzione $\vdash$ e 
 Una derivazione è una sequenza di formule dove ogni formula è un'istanza di un assioma o è ottenuta tramite la regola di inferenza (modus ponens), usando come premesse due formule che la precedono.
 
 \subsection{Formula della Transitività dell'Implicazione}
-La transitività dell'implicazione è espressa dalla formula:
+La regola di transitività dell'implicazione afferma che se abbiamo due implicazioni, dove la conclusione della prima è la premessa della seconda, possiamo concludere un'implicazione diretta dalla premessa iniziale alla conclusione finale. Formalmente, 
 \[(A \to B) \land (B \to C) \to (A \to C)\]
+
+\subsection{Regola dello scambio di premesse}
+$[A \to (B \to C)] \to [B \to (A \to C)]$
+
+\subsection{Regola dello pseudo scoto}
+$\lnot A \to (A \to B)$
+
+\subsection{Regola della doppia negazione}
+$\lnot lnot A \to A$ vale anche l'inverso
+
+\subsection{Consequentia mirabilis}
+$(\lnot A \to A) \to A$
+
+\subsection{Reductio ad absurdum}
+se supponiamo $\lnot A$ e si arriva ad una contraddizione allora da $\lnot A$ si può dimostrare $A$
 
 \newpage
 \section{Logica Proposizionale}
