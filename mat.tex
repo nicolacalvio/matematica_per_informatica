@@ -479,7 +479,13 @@ In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \ti
 prendendo il secondo assioma $(A \to ((A \to A) \to A)) \to (A \to (A \to A)) \to (A \to A)$
 applichiamo il modus ponens alle 2 ne deduciamo $(A \to (A \to A)) \to A \to A$ ora dobbiamo dimostrarla.\\
 Dal primo assioma prendiamo un altra istanza $A \to (A \to A)$ ora applichiamo modus ponens e arriviamo ad $A \to A$ quindi per il teorema di deduzione
-sappiamo che da A si deriva A. \\ \\
+sappiamo che da A si deriva A. 
+\begin{prooftree}
+    \AxiomC{} % Normally, we start with axioms or assumptions, but in this case, the tree is very simple.
+    \UnaryInfC{$A \rightarrow (A \rightarrow A)$} % Assioma 1: A → (A → A)
+    \UnaryInfC{$A \rightarrow A$} % Applying implication: From A, infer A
+\end{prooftree}
+\\ \\
 \textbf{Domanda}: Cos'è un sequente? \\
 \textbf{Risposta}: La formula che sta a destra del simbolo di deduzione è derivabile da ciò che sta a sinistra, vuol dire che esiste una dimostrazione di ciò che sta a destra usando quello che sta a sinistra. \\
 Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens.
