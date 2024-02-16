@@ -651,5 +651,29 @@ riconosciamo che il primo passaggio è l'assioma di Hilbert, il secondo è il te
 \textbf{Risposta}: \\ \\
 \textbf{Domanda}: $(A \lor B) \to [(A \to C) \to (\lnot C \to B)]$ è valida?
 \textbf{Risposta}:  \\ \\
+
+
+\newpage
+\section{Esame Orale}
+Indovinello: sei in un corridoio che termina con due porte, una port conduce alla salvezza mentre l'altra a morte certa. Ci sono due guardiani, uno dice sempre la verità e l'altro mente sempre. Hai il diritto di fare solo una domanda a uno solo dei guardiani per scoprire quale porta conduce alla salvezza ma non sai quale guardiano dice la verità e quale mente
+\subsection{Soluzione}
+bisogna chiedere "se chiedessi all'altro guardiano quale porta conduce alla salvezza cosa mi direbbe?" In questo modo in entrambi i casi la risposta sarebbe la porta che conduce alla morte
+\subsection{Principio di non contraddizione}
+questo indovinello gioca sull'idea di verità e menzogna $(P, \lnot P)$ dove bisogna ragionare per trovare una risposta affidabile.
+L'indovinello sottolinea l'impossibilità logica per il guardiano che dice sempre la verità di mentire e viceversa riflettendo l'idea che una proposizione e la sua negazione non possono coesistere senza contradizione.
+\subsection{Dimostrazione del principio di non contraddizione con Hilbert}
+$\lnot(P \land \lnot P)$ che possiamo riscrivere come $P \to \lnot(\lnot P)$
+per dimostrarlo necessitiamo della regola della doppia negazione che quindi dimostreremo con Hilbert
+\subsection{Dimostrazione della regola della doppia negazione}
+\begin{prooftree}
+    \AxiomC{${\lnot \lnot A} \vdash \lnot \lnot A \to (\lnot \lnot \lnot \lnot \to \lnot \lnot A)$ Assioma 1} 
+    \UnaryInfC{${\lnot \lnot A} \vdash \lnot \lnot A$ Ipotesi} 
+    \UnaryInfC{${\lnot \lnot A} \vdash \lnot \lnot \lnot \lnot A \to \lnot \lnot A$ Modus Ponens}
+    \UnaryInfC{${\lnot \lnot A} \vdash \lnot A \to \lnot \lnot \lnot A$ Contrapp.} 
+    \UnaryInfC{${\lnot \lnot A} \vdash \lnot \lnot A \to A$ Contrapp.} 
+    \UnaryInfC{${\lnot \lnot A} \vdash A$ Modus Ponens} 
+    \UnaryInfC{$\lnot \lnot A \to A$}
+\end{prooftree}
+Quindi possiamo dimostrare per Modus Ponens che $P \to \lnot (\lnot P)$ è vero dimostrando quindi il principio di non contraddizione.
 \end{document}
 
