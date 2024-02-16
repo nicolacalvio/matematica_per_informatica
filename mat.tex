@@ -500,7 +500,7 @@ sappiamo che da A si deriva A.
     \UnaryInfC{$A \rightarrow (A \rightarrow A)$} % Assioma 1: A → (A → A)
     \UnaryInfC{$A \rightarrow A$} % Applying implication: From A, infer A
 \end{prooftree}
-\\ \\
+
 \textbf{Domanda}: Cos'è un sequente? \\
 \textbf{Risposta}: La formula che sta a destra del simbolo di deduzione è derivabile da ciò che sta a sinistra, vuol dire che esiste una dimostrazione di ciò che sta a destra usando quello che sta a sinistra. \\
 Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens.
@@ -612,9 +612,14 @@ La risposta corretta è che l'enunciato $(A \to \lnot A) \to false$ è vera quan
 Dimostriamo quindi creando due lemmi $A \land B \to A$ e $A \to [C \to (A \land C)]$.
 Se riusciamo a dimostrare questi due lemmi per la proprietà transitiva $(A \land B) \to [C \to (A \land C)]$.
 Dimostriamo quindi $A \land B \to A$ e la riscriviamo come $\lnot(A \to \lnot B) \to A$.
-\begin{equation}
-    \dfrac{ \dfrac{\lnot A \to (A \to \lnot B)}{\lnot (A \to \lnot B) \to A }}{A \land B \to A}
-\end{equation}
+\begin{prooftree}
+    \AxiomC{$\vdash \lnot A \to (B \to \lnot A)$}
+    \UnaryInfC{$\lnot A \vdash B \to \lnot A$}
+    \UnaryInfC{$\lnot A \vdash A \to \lnot B$}
+    \UnaryInfC{$\lnot A \to (A \to \lnot B)$}
+    \UnaryInfC{$\lnot(A \to \lnot B) \to A$}
+    \UnaryInfC{$A \land B \to A$}
+\end{prooftree}
 Abbiamo quindi inverito l'implica negando le due proposizioni. Adesso applichiamo la deduzione. \\
 $\lnot A \vdash A \to \lnot B$, giro di nuovo negando: $\lnot A \vdash B \to \lnot A$. riapplichiamo teorema di deduzione. $\vdash \lnot A \to (B \to \lnot A)$ che non ho bisogno di dimostrare poiché primo assioma di Hilbert.
  \\ \\
@@ -673,7 +678,7 @@ per dimostrarlo necessitiamo della regola della doppia negazione che quindi dimo
     \UnaryInfC{${\lnot \lnot A} \vdash \lnot \lnot A \to A$ Contrapp.} 
     \UnaryInfC{${\lnot \lnot A} \vdash A$ Modus Ponens} 
     \UnaryInfC{$\lnot \lnot A \to A$}
-\end{prooftree}
+\end{prooftree} 
 Quindi possiamo dimostrare per Modus Ponens che $P \to \lnot (\lnot P)$ è vero dimostrando quindi il principio di non contraddizione.
 \end{document}
 
