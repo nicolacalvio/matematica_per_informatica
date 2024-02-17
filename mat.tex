@@ -100,9 +100,19 @@ Le coppie ordinate sono utilizzate in vari ambiti della matematica e delle sue a
     \item Rappresentazione di punti nel piano cartesiano.
     \item Costruzione di relazioni tra elementi di due insiemi.
 \end{itemize}
+
+\subsection{Chiusura di un insieme}
+La chiusura x (dove x è una qualunque proprietà es. riflessiva) di una relazione $R$ su un insieme $A$ è la più piccola relazione x che contiene $R$
+\begin{itemize}
+    \item \textbf{Riflessiva:} $R' = R \cup {(a,a) | a \in A}$
+    \item \textbf{Simmetrica:} $R' = R \cup {(b,a)|(a,b) \in R}$
+    \item \textbf{Transitiva:} $R' = R \cup {(a,c)|(a,b) \in R \lor (b,c) \in R}$
+\end{itemize}
+
 \newpage
 \section{Relazioni}
 Le relazioni sono sottoinsiemi di prodotti cartesiani, ad esempio $R \subseteq A \times B$, dove $A$ e $B$ sono insiemi. Ci sono varie tipologie di relazioni (o arità), come relazioni binarie, ternarie, unarie, e nullarie.
+
 
 \subsection{Principi per Relazioni Binarie}
 Le seguenti sono proprietà comuni delle relazioni binarie su un insieme $A$:
@@ -122,6 +132,16 @@ Le seguenti sono proprietà comuni delle relazioni binarie su un insieme $A$:
 \begin{itemize}
 \item Le relazioni possono essere di varie arità, non solo binarie. Ad esempio, una relazione ternaria coinvolge triple di elementi.
 \end{itemize}
+
+\subsection{Insieme delle parti}
+L'insieme delle parti di un insieme \(A\), noto anche come "potenza" di \(A\) e indicato con \(2^A\) o \(\mathcal{P}(A)\), è definito come l'insieme di tutti i possibili sottoinsiemi di \(A\), inclusi l'insieme vuoto \(\emptyset\) e l'insieme \(A\) stesso.
+
+Per esempio, se abbiamo un insieme \(A = \{1, 2\}\), l'insieme delle parti di \(A\) sarà:
+\[
+\mathcal{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}
+\]
+
+In generale, se un insieme \(A\) ha \(n\) elementi, allora l'insieme delle parti di \(A\) avrà \(2^n\) elementi. Questo perché ogni elemento dell'insieme \(A\) può essere presente o assente in un sottoinsieme, il che dà due scelte (presente o assente) per ogni elemento, e quindi il numero totale di combinazioni possibili è \(2^n\).
 
 
 \newpage
@@ -181,7 +201,7 @@ La cardinalità di un insieme $A$ viene indicata con $|A|$. La relazione di card
 \item $|A| < |B|$ se $|A| \leq |B|$ ma $|A| \neq |B|$.
 \end{itemize}
 
-\subsection{Teoremi Fondamentali}
+\subsection{Teoremi Fondamentali - Bernstein - Schroeder}
 \begin{itemize}
 \item \textbf{Teorema}: Se $|A| \leq |B|$ e $|B| \leq |A|$, allora $|A| = |B|$. Questo è noto come il \textbf{teorema di Cantor-Bernstein-Schroeder}, che afferma che se esistono funzioni iniettive da $A$ a $B$ e da $B$ a $A$, allora esiste una biiezione tra $A$ e $B$.
 \end{itemize}
@@ -215,11 +235,31 @@ Le operazioni dell'algebra di Boole sono:
     \item \textbf{Complemento} \\ $A \lor \overline{A} = \top \quad\quad A \land \overline{A} = \bot$
     \item \textbf{De Morgan} \\ $\overline{A \lor B} = \overline{A} \lor \overline{B} \quad\quad \overline{A \land B} = \overline{A} \lor \overline{B}$
 \end{itemize}
+
+\subsection{Teorema di rappresentazione di Stone}
+Per ogni algebra di Boole esiste uno spazio di Stone i cui elementi corrispondono agli elementi dell'algebra e le operazione algebriche di bool corrispondono a quelle insiemistiche. \\
+Quindi in sostanza se una cosa è dimostrabile negli insiemi sicuramente è vera anche nelle algebre di Boole.
+
+\subsection{Algebra di Heyting}
+L'algebra di Heyting anche detta intuizionistica
+
+\begin{itemize}
+    \item \textbf{$\to$}: in Heyting l'implicazione non corrisponde a $\lnot A \lor B$
+    \item \textbf{$\lnot$}: in Heyting è $bottom$ e non garantisce l'esistenza del complemento
+\end{itemize}
+
+\subsubsection{Conversione da Heyting a Boole}
+Per convertire un algebra di Heyting in un algebra di Boole bisiogna rispettare le proprietà dell'algebra di Boole prestando attenzione particolare a 
+\begin{itemize}
+    \item \textbf{Legge del terzo escluso}: Per l'algebra di boole vale questa proprietà $P \lor \lnot P$ dove uno delle due è vero
+    \item \textbf{Involuzione della negazione}: $\lnot \lnot P \equiv P$ 
+\end{itemize}
+
 \subsection{Considerazioni Aggiuntive}
 \begin{itemize}
     \item Le operazioni booleane sono definite su un insieme di due elementi, tipicamente rappresentati come ${0, 1}$, ${\bot, \top}$, o ${\text{false}, \text{true}}$.
 \end{itemize}
-\newpage
+
 \section{Assiomi di Hilbert per la Logica Proposizionale}
 
 Gli assiomi di Hilbert sono formule di base in un sistema logico che, insieme alle regole di inferenza, permettono la deduzione di teoremi.
@@ -255,13 +295,26 @@ $[A \to (B \to C)] \to [B \to (A \to C)]$
 $\lnot A \to (A \to B)$
 
 \subsection{Regola della doppia negazione}
-$\lnot lnot A \to A$ vale anche l'inverso
+$\lnot \lnot A \to A$ vale anche l'inverso
 
 \subsection{Consequentia mirabilis}
 $(\lnot A \to A) \to A$
 
 \subsection{Reductio ad absurdum}
 se supponiamo $\lnot A$ e si arriva ad una contraddizione allora da $\lnot A$ si può dimostrare $A$
+
+\subsection{Dimostrazione}
+Una dimostrazione è una sequenza di formule che contiene o deduzioni o istanze di assiomi o premesse, l'ultima della quale è la conclusione
+
+\subsection{Conversione da op. logici a $\lnot$ $\to$}
+$A \lor B = \lnot A \to B$ \\
+$A \land B = A \to \lnot B$
+
+\subsection{Correttezza e completezza}
+\begin{itemize}
+    \item \textbf{Correttezza}: proprietà di un sistema logico che garantisce che tutte le formule dimostrabili sono vere
+    \item \textbf{Completezza}: proprietà di un sistema logico che tutte le formule vere sono dimostrabili
+\end{itemize}
 
 \newpage
 \section{Logica Proposizionale}
@@ -354,19 +407,24 @@ questi esercizi sono tratti dali web seminar:
 
 \subsection{Insiemi}
 \textbf{Domanda}: La differenza tra due insiemi $A$ e $B$  \\
-\textbf{Risposta}: È definita come le $X$ che non appartengono ad $A$ ma appartengono a $B$. \\ \\
+\textbf{Risposta}: La differenza $A-B$ sono gli elementi che appartengono ad $A$ ma non appartengono a $B$. \\ \\
 \textbf{Domanda}: Come definisci l'intersezione tra due insiemi $A$ e $B$? \\
-\textbf{Risposta}: L'intersezione è le $X \in A: X \in B$ (principio di comprensione) \\ \\
+\textbf{Risposta}: L'intersezione è le $X \in A: X \in B$ ossia appartenenti sia ad $A$ che a $B$(principio di comprensione) \\ \\
 \textbf{Domanda}: Come definisci l'unione? \\
 \textbf{Risposta}: L'insieme di elementi che appartengono ad $A$ più quelli che appartengono a $B$. Per dimostrarlo serve un assioma della teoria degli insiemi che dato un insieme $A$ e un insieme $B$ esiste un insieme $C$ tale che $A \subseteq C \land C,B \subseteq C$ \\ \\
 \textbf{Domanda}: Dimostra l'uguaglianza $A - (B \cup C) = (A - B) \cap (A - C)$ \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: dimostrazione
+\begin{itemize}
+    \item $A - (B \cup C) \subseteq (A - B) \cap (A-C)$ quindi prendendo una $x \in A$ e $x \notin B \cup C \to x \notin B, x \notin C$ quindi $x \in (A-B) \cap (A-C)$ quindi ogni elemento di $A-(B \cup C)$ è anche in $(A-B) \cap (A-C)$
+    \item $(A-B) \cap (A-C) \subseteq A - (B \cup C)$
+    prendiamo una $x \in (A-B) \cap (A-C) \to x \in A, x \notin B, C, B \cup C$ quindi $x \in A - (B \cup C)$
+\end{itemize}
 \textbf{Domanda}: Cos'è la chiusura di un insieme rispetto ad una proprietà, esempio insieme delle coppie $(n, n+1)$ ossia funzione successore vista come insieme di Coppie, voglio la chiusura simmetrica \\
 \textbf{Risposta}: La chiusura simmetrica della funzione successore è costituita da tutte quelle coppie $(x,y)$ tali che $y$ è il successore di $x$ oppure $x$ è il successore di $y$\\ \\
 \textbf{Domanda}: Fammi la chiusura transitiva della funzione successore \\
-\textbf{Risposta}: La chiusura transitiva della funzione successore è l'insieme delle coppie $(x,y)$ in cui $x$ < $y$\\ \\
-\textbf{Domanda}: Qual è il più piccolo sovrainsieme della funzione successore che ha la proprietà di essere una funzione transitiva? \\
-\textbf{Risposta}: Minore stretto perchè è il sovrainsieme più grande\\ \\
+\textbf{Risposta}: La chiusura transitiva della funzione successore è l'insieme delle coppie $(x,y)$ in cui $x$ < $y$. Esempio: ${(1,2), (2,3)} \to {(1,2),(2,3),(1,3),(1,4)}$\\ \\
+\textbf{Domanda}: Qual è il più piccolo sovrainsieme della funzione successore che ha la proprietà di essere una relazione transitiva? \\
+\textbf{Risposta}: Minore stretto perchè è il sovrainsieme più grande $T={(a,b) \in N \times N | a < b}$\\ \\
 \textbf{Domanda}: Cos'è la chiusura transitiva e simmetrica della funzione successore (dobbiamo trovare la più piccola relazione simmetrica e transitiva che contiene come sottoinsieme la funzione successore)\\
 \textbf{Risposta}: Sono tutte le coppie $(x,y)$ tale che $x < y$ per simmetria anche tutte le coppie $y < x$ quindi è l'unione della relazione $<$ e $>$ \\ \\
 
@@ -384,8 +442,8 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Risposta}: La relazione vuota su $N \times N$ è un sottoinsieme di $N \times N$ che non contiene alcuna coppia ordinata. La relazione vuota sull'insieme vuoto è un sottoinsieme dell'insieme vuoto, che non contiene alcun elemento. \\ \\
 \textbf{Domanda}: Relazioni simmetriche e antisimmetriche in contemporanea. \\
 \textbf{Risposta}: \\ \\
-\textbf{Domanda}: Quali sono le proprietà delle relazioni che vengono preservate da intersezione e unione
-\textbf{Risposta}: \\ \\
+\textbf{Domanda}: Quali sono le proprietà delle relazioni che vengono preservate da intersezione e unione \\
+\textbf{Risposta}: Riflessività, simmetria, transitività \\ \\
 \textbf{Domanda}: Se faccio intersezione di due relazioni riflessive quello che ottengo è ancora una relazione riflessiva? \\
 \textbf{Risposta}: Sì, l'intersezione di due relazioni riflessive è ancora una relazione riflessiva. Lo dimostriamo prendendo due insiemi $R1$ e $R2$ riflessivi, la loro intersezione è riflessiva perché prendo gli elementi che sono sia nel primo che nel secondo insieme, essendo questi elementi riflessivi anche l'intersezione sarà riflessiva \\ \\
 \textbf{Domanda}: L'intersezione preserva la simmetria? \\
@@ -393,13 +451,13 @@ questi esercizi sono tratti dali web seminar:
 \textbf{Domanda}: L'unione preserva la transitività? \\
 \textbf{Risposta}: No, se unisco due relazioni transitive non ottengo una relazione transitiva \\ \\
 \textbf{Domanda}: Se ho due funzioni iniettive e le compongo la funzione composta è innettiva? \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: sì\\ \\
 \textbf{Domanda}: Se ho due funzioni suriettive e le compongo la funzione composta è suriettiva? \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: sì \\ \\
 \textbf{Domanda}: Se $f$ e $g$ sono funzioni dove non so nulla ma so che la loro composta è iniettiva, posso concludere che sia $f$ che $g$ sono due funzioni iniettive? \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: No, posso concludere che una delle due è iniettiva\\ \\
 \textbf{Domanda}: Dammi una relazione transitiva e una non transitiva sugli insiemi dei booleani. \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: L'implicazione è una relazione transitiva nei booleani, la non transitiva non esiste\\ \\
 \textbf{Domanda}: Ho un insieme A che contiene i colori della bandiera italiana (ossia 3 elementi) voglio sapere quante sono le relazioni binarie riflessive su A\\
 \textbf{Risposta}: La relazione riflessiva è una relazione che $\forall a \in A: aRa$ e una relazione binaria su un insieme $A$ è un qualunque sottoinsieme del prodotto cartesiano $A \times A$. 
 Le possibili relazioni su $A$ riflessive, chiamiamo $R$ una relazione binaria su $A$ se tutte queste 3 coppie appartengono ad $R$ sono una relazione riflessiva.
@@ -410,7 +468,7 @@ un sottoinsieme del prodotto cartesiano $A \times A$, questa relazione è rifles
 $R$ è una relazione binaria su un insieme $A$ che definiamo come sottoinsieme del prodotto cartesiano $A \times A$, la relazione $R$ mette in relazione $x$ e $y$ tale che $x \in y$ e $x \subset y$ 
 $(\emptyset, {\emptyset})$ fa parte della relazione ed è l'unica coppia. Non è riflessiva, è antiriflessiva, non è simmetrica, è antisimmetrica, è transitiva\\ \\
 \textbf{Domanda}: Fammi l'esempio di una relazione che non è né riflessiva né antiriflessiva \\
-\textbf{Risposta}:\\ \\
+\textbf{Risposta}:non si può\\ \\
 
 
 
@@ -681,4 +739,3 @@ per dimostrarlo necessitiamo della regola della doppia negazione che quindi dimo
 \end{prooftree} 
 Quindi possiamo dimostrare per Modus Ponens che $P \to \lnot (\lnot P)$ è vero dimostrando quindi il principio di non contraddizione.
 \end{document}
-
