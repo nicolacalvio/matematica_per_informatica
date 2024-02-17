@@ -476,9 +476,9 @@ $(\emptyset, {\emptyset})$ fa parte della relazione ed è l'unica coppia. Non è
 \textbf{Domanda}: Una funzione è un particolare tipo di relazione, una funzione è invertibile se e solo se vista e considerata come relazione è una relazione simmetrica. \\
 \textbf{Risposta}: Quindi è una relazione binaria su un insieme dato che va da $A$ in $A$. Per dimostrare che una funzione è invertibile deve essere biunivoca ossia suriettiva e iniettiva. \\ \\
 \textbf{Domanda}: supponiamo di avere una funzione da $A$ in $A$. $f: f = f \circ f$ (idempotenza) dammi esempi dove questo avviene (no identità) \\
-\textbf{Risposta}: \\ \\
-\textbf{Domanda}: trovare delle condizioni necessarie e sufficenti affinchè questo avvenga, quali sono le proprietà che deve avere questa funzione $f \times f = f \circ f$ \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: $A = \mathbb{N}$
+$f(n)=\begin{cases} 0, & \mbox{se }n\mbox{ x=0} \\ 1, & \mbox{se }n\mbox{ x\textgreater 0}
+\end{cases}$ \\ \\
 \textbf{Domanda}: Cos'è una funzione da $A$ in $B$? \\
 \textbf{Risposta}: E' una relazione tale che per $ \forall a \in A \exists b \in B: a R b$ \\ \\
 \textbf{Domanda}: Quando una funzione da A in B si dice iniettiva? \\
@@ -529,18 +529,19 @@ Ogni sottoinsieme di numeri primi può essere associato univocamente a una relaz
 In conclusione, poiché l'insieme delle parti dei numeri primi è non numerabile e ogni sottoinsieme di numeri primi può essere associato univocamente a una relazione TAT, segue che l'insieme delle relazioni TAT è anch'esso non numerabile e, per costruzione, la sua cardinalità è almeno pari a quella dell'insieme delle parti dei numeri primi. Questo ragionamento non si applica direttamente alle relazioni SAS, la cui cardinalità dipende da considerazioni diverse, ma suggerisce che le relazioni TAT rappresentano un insieme vasto e complesso di relazioni. \\ \\
 \textbf{Domanda}: Sono di più i numeri naturali o le liste finite di numeri naturali? \\
 \textbf{Risposta}: La cardinalità di $N$ si indica con $\omega$, $2^\omega$ è riferita alla cardinalità del continuo. Qui parliamo di insiemi di sequenza di n.
-L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è una funzione biettiva. \textbf{Bernstein Schroder} dice che se esistono due funzioni iniettive una in un senso e una in un altro allora esiste una funzione biettiva. Abbiamo quindi dimostrato che la cardinalità di n, parti finite di n hanno la stessa cardinalità. \\ \\
-\textbf{Domanda}: Sono più i numeri naturali o i sottoinsiemi finiti dei naturali?
-\textbf{Risposta}: \\ \\
+L'equipotenza ossia che 2 cose hanno la stessa cardinalità avviene quando c'è una funzione biettiva. \textbf{Bernstein Schroder} dice che se esistono due funzioni iniettive una in un senso e una in un altro allora esiste una funzione biettiva. Abbiamo quindi dimostrato che la cardinalità di n, parti finite di n hanno la stessa cardinalità. 
+Bisogna quindi trovare due inizioni per la biezione. Nel primo lato ossia $\mathbb{N} \to$ lista di $\mathbb{N}$ possiamo mappare i naturali in singleton $x\to {x}$. Nel secondo lato possiamo usare la \textbf{codifica di G\"odel} per mappare una lista in un intero creando così una inizieone. Un esempio di questa codifica è ${2,3,5}\to 30$ poichè $2^1 \times 3^1 \times 5^1 = 30$ ossia per generare l'intero usiamo i numeri primi alla potenza delle volte che appaiono e gli moltiplichiamo fra loro. Nel caso non ci fossero numeri primi faremo per ogni intero la scomposizione in numeri primi\\ \\
+\textbf{Domanda}: Sono più i numeri naturali o i sottoinsiemi finiti dei naturali? \\
+\textbf{Risposta}: $|\mathbb{N}| = \aleph_0$ (aleph-zero) ossia la cardinalità più piccola dell'infinito (anche detto infinito numerabile). $|P(\mathbb{N})|\textgreater \aleph_0$ la cardinalità dell'insieme delle parti di un insieme è $2^{|A|} = 2^{\aleph_0}$\\ \\
 \textbf{Domanda}: Tirar fuori la cardinalità 49 dall’insieme 7 usando le funzioni \\
 \textbf{Risposta}: Se ho un insieme $A$ e un insieme $B$ la cardinalità delle funzioni da $A$ a $B$ è $B^A$. Voglio sapere le funzioni iniettive (tutto il dominio è mappato nel codominio), quindi ci sono tante funzioni iniettive quante le permutazioni di 7 ossia $7!$. L'insieme delle parti di 7 è $2^7$ ed è l'insieme di tutte le funzioni da 7 in bool, gli elementi di $7 \times 7$ è 49 (tanti quanti da bool a giorni della settimana). \\ \\
 \textbf{Domanda}: l'insieme dei numeri maturali è equipotente alle coppie di numeri naturali? \\
-\textbf{Risposta}: \\ \\
-\textbf{Domanda}: Capire se $N$ e $N*$ (stella di clini) sono equipotenti. \\
-\textbf{Risposta}: \\ \\
-\textbf{Domanda}: Secondo te ci sono più elementi nell'insieme $bool \times nat$ ossia il prodotto cartesiano tra (true,false) e i naturali o le funzioni che vanno dai booleani ai naturali?
-\textbf{Risposta}: $bool \times nat$ è inifito, è l'insieme di tutte le coppie di cui il primo elemento è booleano e il secondo naturale, le funzioni da bool a nat sono anche esse infinite.
-In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \to nat$ quindi essi sono equipotenti.\\ \\
+\textbf{Risposta}: Sì, è visualizzabile con la diagonale di Cantor, per ogni coppia di numeri naturali possiamo associare un numero naturale otteniamo quindi una biiezione\\ \\
+\textbf{Domanda}: Capire se $N$ e $N^*$ (stella di kleene) sono equipotenti. \\
+\textbf{Risposta}: $N^*$ ha una cardinalità maggiore poichè rappresenta l'insieme di tutte le sequenze finite\\ \\
+\textbf{Domanda}: Secondo te ci sono più elementi nell'insieme $bool \times \mathbb{N}$ ossia il prodotto cartesiano tra (true,false) e i naturali o le funzioni che vanno dai booleani ai naturali? \\
+\textbf{Risposta}: $bool \times \mathbb{N}$ è inifito, è l'insieme di tutte le coppie di cui il primo elemento è booleano e il secondo naturale, le funzioni da bool a nat sono anche esse infinite.
+In conclusione vediamo come possiamo mappare allo stesso modo i valori $bool \times nat$ e i valori $bool \to \mathbb{N}$ quindi essi sono equipotenti.\\ \\
 \textbf{Domanda}: A,B,C qualunque chi è più grande $A \times (B \times C)$ oppure $(A \times B) \times C$? \\
 \textbf{Risposta}: bisogna trovare una biiezione ossia $f: A \times (B \times C) \to (A \times B) \times C$ dove $f(a,(b,c))=((a,b),c)$\\ \\
 \textbf{Domanda}: Quante sono le funzioni da $A$ in $A$? \\
@@ -561,9 +562,17 @@ sappiamo che da A si deriva A.
 
 \textbf{Domanda}: Cos'è un sequente? \\
 \textbf{Risposta}: La formula che sta a destra del simbolo di deduzione è derivabile da ciò che sta a sinistra, vuol dire che esiste una dimostrazione di ciò che sta a destra usando quello che sta a sinistra. \\
-Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens.
+Una dimostrazione è una sequenza di formule in cui ciascuna formula nella sequenza è un istanza di assioma, premesse o ottenute da modus ponens. \\ \\
 \textbf{Domanda}: Questo sequente è corretto? $B, B \to A, A \to C \vdash C$ \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: 
+Sì
+\begin{prooftree}
+    \AxiomC{$B$}
+    \AxiomC{$B \to A$}
+    \BinaryInfC{$A$}
+    \AxiomC{$A \to C$}
+    \BinaryInfC{$C$}
+\end{prooftree}
 \textbf{Domanda}: cos'è una dimostrazione? \\
 \textbf{Risposta}: è una serie di passaggi logici, si parte da degli assiomi (che non richiedono dimostrazione)  ....\\ \\ 
 
@@ -573,26 +582,17 @@ Una dimostrazione è una sequenza di formule in cui ciascuna formula nella seque
 \textbf{Domanda}: Esiste un algebra di boole che ha 4 elementi? \\
 \textbf{Risposta}: Sì, è l'insieme che contiene insieme vuoto, true, false, (true, false). \\ \\
 \textbf{Domanda}: Esiste un algebra di boole con 3 elementi? \\
-\textbf{Risposta}: \\ \\
+\textbf{Risposta}: no non può esistere deve essere $2^n$\\ \\
 \textbf{Domanda}: Considera l'algebra di heyting ha un elemento top, un bottom e due elementi A e B fra questi 2 elementi. Nelle algebre di Heyting l'implicazione è un operatore primitivo. $A \to B$ quindi cos'è? \\
 \textbf{Risposta}: Può essere considerata un algebra di boole poiché ogni elemento ha il suo complemento. $A \to B$ è $\lnot A \lor B$ ossia $B$\\ \\
 
 
 \subsection{Logica}
-\textbf{Domanda}: Dimostrare che $A \lor B \to B \lor A$
-\textbf{Risposta}: Si può fare con le tavole di verità, con Hilbert o con i Tableau. Risolvendo con gli assiomi di Hilbert possiamo modificare la formula usando solo $\lnot$ e $\to$. In questo caso $A \lor B$ diventa $\overline{A} \to B$. \\
-Quindi traducendo abbiamo $\overline{A} \to B \to \overline{B} \to A$. Possiamo anche dimostrare con Tableau, prendo la formula e la nego poi applico Tableau e dimostro che costruisco un albero chiuso, questo significa che la formula negata non è soddisfacibile \\ \\
 \textbf{Domanda}: Supponiamo di prendere la formula $\vdash (A \to (B \to C)) \to ((A \to B) \to (A \to C))$ \\
-\textbf{Risposta}: Per dimostrare l'assioma possiamo usare il teorema di deduzione e il modus ponens
-\begin{itemize}
-    \item $A \to (B \to C) \vdash (A \to B) \to (A \to C)$
-    \item poi applichiamo di nuovo il teorema di deduzione
-    \item $A \to (B \to C), A \to B \vdash A \to C$
-    \item $(A \to B), A, A \to (B \to C) \vdash C$
-\end{itemize}
+\textbf{Risposta}: è un assioma di Hilbert quindi è dimostrata
 \textbf{Domanda}: Che cos'è una dimostrazione \\
 \textbf{Risposta}: Una sequenza di formule che contiene o deduzioni o istanze di assiomi o premesse, l'ultima della quale è $C$ nel caso sopra. \\ \\
-\textbf{Domanda}: $a \lor b = a \iff a \land b = b$ ti torna?
+\textbf{Domanda}: $a \lor b = a \iff a \land b = b$ ti torna? \\
 \textbf{Risposta}: Se una cosa è vera nel mondo degli insiemi sicuramente è vera nell'algebra di boole, per il \textbf{Teorema di Stone} che dice che le algebre fatte in modo tale che i suoi elementi sono insieme, che l'unione corrisponde al join ecc sono totalmente generali. Quindi se decidiamo di dimostrarlo negli insiemi sarà dimostrato anche per qualunque algebra di boole. Prendiamo quindi sue insiemi $a$ e $b$
 prendo l'unione di $a$ e $b$ se è uguale ad $a$ significa che la parte di $b$ non intersecata con $a$ è vuota, quindi $b$ è un sottoinsieme di $a$. oppure usiamo l'algebra di boole per dimostrare. \\
 \begin{itemize}
@@ -606,7 +606,7 @@ prendo l'unione di $a$ e $b$ se è uguale ad $a$ significa che la parte di $b$ n
     \item ora dimostriamo l'altra direzione $a \lor b = a \Leftarrow a \land b = b$
     \item $a \lor b = a \lor (a \land b)=a$ per proprietà assorbimento quindi dimostrato
 \end{itemize}
-\textbf{Domanda}: $a \land \overline{b} = \bot \iff a \lor b = b$
+\textbf{Domanda}: $a \land \overline{b} = \bot \iff a \lor b = b$ \\
 \textbf{Risposta}:
 \begin{itemize}
     \item $a \lor b = b$ significa che $a \subseteq b$ quindi $a \leq b$
@@ -637,7 +637,7 @@ Ora proviamo a dimostrarlo con l'algebra di boole senza usare gli insiemi
     \item $A = \bot, B = \bot, C = \bot \quad \therefore B$ è vera
 \end{enumerate}
 \textbf{Domanda}: e se la mia formula fosse $A \to (B \to A)$ (sempre considerando che i simboli proposizionali sono $A, B, C$) \\
-\textbf{Risposta}: ci sono 8 modelli
+\textbf{Risposta}: ci sono 8 modelli \\ \\
 \textbf{Domanda}: voglio dedurre la seguente formula $A \land B \to B$ usando Hilbert \\
 \textbf{Risposta}: Negli assiomi di Hilbert noi abbiamo solo il $\lnot$ e $\to$ sembrerebbe che non abbiamo $\lor \land$ ecc ma in realtà possiamo derivarli
 \begin{itemize}
@@ -652,8 +652,8 @@ quindi possiamo derivare la formula $A \land B \to B$
     \item applico la transitività $\overline{B} \to \overline{\overline{A \to \overline{B}}}$
     \item terzo assioma di Hilbert $(\overline{A} \to \overline{B}) \to (B \to A)$
 \end{itemize}
-posso usare alcune cose come lo scambio di premesse $\dfrac{A \to (B \to C)}{B \to (A \to C)}$, \\ la transitività $(A \to B) \to (B \to C) \to (A \to C)$ e lo pseudo scoto
-\textbf{Domanda}: Cos'è correttezza e completezza?
+posso usare alcune cose come lo scambio di premesse $\dfrac{A \to (B \to C)}{B \to (A \to C)}$, \\ la transitività $(A \to B) \to (B \to C) \to (A \to C)$ e lo pseudo scoto \\ \\
+\textbf{Domanda}: Cos'è correttezza e completezza? \\
 \textbf{Risposta}: La correttezza è la proprietà di un sistema logico che garantisce che tutte le formule dimostrabili siano vere. La completezza è la proprietà di un sistema logico che garantisce che tutte le formule vere siano dimostrabili. \\ \\
 \textbf{Domanda}: Il seguente enunciato $(A \to \lnot A) \to false$ è vero quando\\
 \textbf{Risposta}: 
